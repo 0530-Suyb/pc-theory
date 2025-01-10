@@ -1,0 +1,708 @@
+<!doctype html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+    function plotChart(divId, chartData) {
+        // Convert from stringified html, to valid JSON
+        const chartDetails = JSON.parse(chartData.replace(/&quot;/g,'"'));
+        new Chart(document.getElementById(divId), {
+            type: chartDetails.type,
+            data: {
+                labels: chartDetails.labels,
+                datasets: chartDetails.datasets
+            },
+            options: {
+                legend: { display: chartDetails.legend },
+                title: {
+                    display: true,
+                    text: chartDetails.title
+                }
+            }
+        });
+    }
+</script>
+<html>
+<head>
+    <title>Hyperledger Caliper Report</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+        .left-column {
+            position: fixed;
+            width:20%;
+        }
+        .left-column ul {
+            display: block;
+            padding: 0;
+            list-style: none;
+            border-bottom: 1px solid #d9d9d9;
+            font-size: 14px;
+        }
+        .left-column h2{
+            font-size: 24px;
+            font-weight: 400;
+            margin-block-end: 0.5em;
+        }
+        .left-column h3{
+            font-size: 18px;
+            font-weight: 400;
+            margin-block-end: 0.5em;
+        }
+        .left-column li{
+            margin-left: 10px;
+            margin-bottom: 5px;
+            color: #5e6b73;
+        }
+        .right-column {
+            margin-left: 22%;
+            width:60%;
+        }
+        .right-column table {
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .right-column h2{
+            font-weight: 400;
+        }
+        .right-column h3{
+            font-weight: 400;
+        }
+        .right-column h4 {
+            font-weight: 400;
+            margin-block-end: 0;
+        }
+        .right-column th {
+            border-width: 1px;
+            font-size: small;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #f2f2f2;
+        }
+        .right-column td {
+            border-width: 1px;
+            font-size: small;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+            font-weight: 400;
+        }
+        .tag {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+        }
+        pre {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            overflow:auto;
+            max-height:300px;
+            font-size:12px;
+        }
+        .charting {
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            page-break-inside: auto;
+        }
+        .chart {
+            display:flex;
+            flex:1;
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body style="font-family: IBM Plex Sans; font-weight: 200;">
+    <main>
+        <div class="left-column">
+            <img src="https://hyperledger.github.io/caliper/assets/img/hyperledger_caliper_logo_color.png" style="width:95%;" alt="">
+            <ul>
+                <h3>&nbspBasic information</h3>
+                <li>DLT: &nbsp<span style="font-weight: 500;">fabric</span></li>
+                <li>Name: &nbsp<span style="font-weight: 500;"></span></li>
+                <li>Description: &nbsp<span style="font-weight: 500;"></span></li>
+                <li>Benchmark Rounds: &nbsp<span style="font-weight: 500;">6</span></li>
+                <li><a href="#benchmarkInfo">Details</a></li>
+            </ul>
+            <ul>
+                <h3>&nbspBenchmark results</h3>
+                <li><a href="#benchmarksummary">Summary</a></li>
+                    <li><a href="#cc1 Set, tps 2500.">cc1 Set, tps 2500.</a></li>
+                    <li><a href="#cc1 Set, tps 2600.">cc1 Set, tps 2600.</a></li>
+                    <li><a href="#cc1 Set, tps 2700.">cc1 Set, tps 2700.</a></li>
+            </ul>
+            <ul>
+                <h3>&nbspSystem under test</h3>
+                <li><a href="#sutdetails">Details</a></li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <h1 style="padding-top: 3em; font-weight: 500;">Caliper report</h1>
+            <div style="border-bottom: 1px solid #d9d9d9; margin-bottom: 10px;" id="benchmarksummary">
+                <table style="min-width: 100%;">
+                    <h3>Summary of performance metrics</h3>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                    </tr>
+
+                    <tr>
+                         <td>cc1 Set, tps 2500.</td> <td>22924</td> <td>61</td> <td>2291.6</td> <td>1.91</td> <td>0.16</td> <td>1.13</td> <td>2073.5</td>
+                    </tr>
+                    <tr>
+                         <td>cc1 Set, tps 2500.</td> <td>22772</td> <td>38</td> <td>2266.0</td> <td>2.80</td> <td>0.10</td> <td>1.23</td> <td>2061.5</td>
+                    </tr>
+                    <tr>
+                         <td>cc1 Set, tps 2600.</td> <td>24287</td> <td>35</td> <td>2414.3</td> <td>1.68</td> <td>0.11</td> <td>1.07</td> <td>2191.2</td>
+                    </tr>
+                    <tr>
+                         <td>cc1 Set, tps 2600.</td> <td>24783</td> <td>40</td> <td>2465.0</td> <td>1.53</td> <td>0.09</td> <td>0.89</td> <td>2247.0</td>
+                    </tr>
+                    <tr>
+                         <td>cc1 Set, tps 2700.</td> <td>24440</td> <td>46</td> <td>2428.9</td> <td>1.73</td> <td>0.11</td> <td>1.12</td> <td>2223.8</td>
+                    </tr>
+                    <tr>
+                         <td>cc1 Set, tps 2700.</td> <td>24470</td> <td>46</td> <td>2435.8</td> <td>1.69</td> <td>0.33</td> <td>1.13</td> <td>2226.5</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="cc1 Set, tps 2500.">
+                <h2>Benchmark round: cc1 Set, tps 2500.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 2500
+</pre>
+                        <h3>Performance metrics for cc1 Set, tps 2500.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2500.</td> <td>22924</td> <td>61</td> <td>2291.6</td> <td>1.91</td> <td>0.16</td> <td>1.13</td> <td>2073.5</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2500.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>114.47</td> <td>59.45</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.65921875</td> <td>0.319375</td> <td>0.0155</td> <td>0.0143</td> <td>11.0</td> <td>2.99</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.64375</td> <td>0.2934375</td> <td>0.0155</td> <td>0.0148</td> <td>10.8</td> <td>2.84</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.64140625</td> <td>0.3103125</td> <td>0.0155</td> <td>0.0149</td> <td>11.0</td> <td>2.99</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.59953125</td> <td>0.2784375</td> <td>0.0162</td> <td>0.0150</td> <td>10.8</td> <td>2.79</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.65140625</td> <td>0.31109375</td> <td>0.0161</td> <td>0.0151</td> <td>11.0</td> <td>2.97</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.6625</td> <td>0.29546875</td> <td>0.0152</td> <td>0.0144</td> <td>10.8</td> <td>2.75</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.10046875</td> <td>1.4996875</td> <td>0.187</td> <td>0.171</td> <td>91.1</td> <td>177</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>9.99828125</td> <td>4.8896875</td> <td>0.398</td> <td>0.381</td> <td>125</td> <td>61.5</td> <td>96.2</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>2.8625</td> <td>1.31796875</td> <td>0.195</td> <td>0.180</td> <td>118</td> <td>32.2</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.07921875</td> <td>1.49953125</td> <td>3.13</td> <td>3.09</td> <td>118</td> <td>205</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>12.97578125</td> <td>7.7615625</td> <td>3.49</td> <td>3.37</td> <td>125</td> <td>94.4</td> <td>170</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for cc1 Set, tps 2500.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2500.</td> <td>22772</td> <td>38</td> <td>2266.0</td> <td>2.80</td> <td>0.10</td> <td>1.23</td> <td>2061.5</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2500.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>104.76</td> <td>53.57</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.67484375</td> <td>0.3046875</td> <td>0.0158</td> <td>0.0151</td> <td>10.9</td> <td>2.87</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.6334375</td> <td>0.28265625</td> <td>0.0173</td> <td>0.0160</td> <td>10.6</td> <td>2.65</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.70390625</td> <td>0.30296875</td> <td>0.0162</td> <td>0.0156</td> <td>10.9</td> <td>2.90</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.67078125</td> <td>0.28125</td> <td>0.0181</td> <td>0.0168</td> <td>10.7</td> <td>2.65</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.6965625</td> <td>0.29875</td> <td>0.0158</td> <td>0.0153</td> <td>10.9</td> <td>2.86</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.64578125</td> <td>0.27546875</td> <td>0.0168</td> <td>0.0156</td> <td>10.6</td> <td>2.63</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.089375</td> <td>1.413125</td> <td>0.187</td> <td>0.171</td> <td>90.4</td> <td>175</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>11.16796875</td> <td>5.0834375</td> <td>0.423</td> <td>0.398</td> <td>124</td> <td>61.0</td> <td>91.7</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>2.81875</td> <td>1.26671875</td> <td>0.188</td> <td>0.179</td> <td>117</td> <td>32.1</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.1215625</td> <td>1.41</td> <td>3.20</td> <td>3.17</td> <td>118</td> <td>204</td> <td>175</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>13.12390625</td> <td>7.3846875</td> <td>3.53</td> <td>3.47</td> <td>124</td> <td>93.5</td> <td>91.7</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="cc1 Set, tps 2600.">
+                <h2>Benchmark round: cc1 Set, tps 2600.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 2600
+</pre>
+                        <h3>Performance metrics for cc1 Set, tps 2600.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2600.</td> <td>24287</td> <td>35</td> <td>2414.3</td> <td>1.68</td> <td>0.11</td> <td>1.07</td> <td>2191.2</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2600.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>99.43</td> <td>53.00</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.6909375</td> <td>0.3340625</td> <td>0.0157</td> <td>0.0149</td> <td>11.6</td> <td>3.11</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.63046875</td> <td>0.30140625</td> <td>0.0173</td> <td>0.0163</td> <td>11.4</td> <td>2.83</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.685625</td> <td>0.324375</td> <td>0.0161</td> <td>0.0155</td> <td>11.7</td> <td>3.09</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.7028125</td> <td>0.31125</td> <td>0.0174</td> <td>0.0160</td> <td>11.4</td> <td>2.82</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.708125</td> <td>0.3240625</td> <td>0.0166</td> <td>0.0154</td> <td>11.6</td> <td>3.04</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.63015625</td> <td>0.30375</td> <td>0.0170</td> <td>0.0150</td> <td>11.3</td> <td>2.81</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.1821875</td> <td>1.505</td> <td>0.191</td> <td>0.180</td> <td>96.5</td> <td>187</td> <td>186</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>11.87125</td> <td>5.50234375</td> <td>0.400</td> <td>0.370</td> <td>133</td> <td>65.0</td> <td>178</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>3.061875</td> <td>1.41796875</td> <td>0.199</td> <td>0.192</td> <td>125</td> <td>34.8</td> <td>186</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.2665625</td> <td>1.52703125</td> <td>3.30</td> <td>3.27</td> <td>125</td> <td>217</td> <td>186</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>13.20625</td> <td>7.96640625</td> <td>3.66</td> <td>3.59</td> <td>132</td> <td>99.7</td> <td>101</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for cc1 Set, tps 2600.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2600.</td> <td>24783</td> <td>40</td> <td>2465.0</td> <td>1.53</td> <td>0.09</td> <td>0.89</td> <td>2247.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2600.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>98.83</td> <td>52.22</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.7359375</td> <td>0.34</td> <td>0.0154</td> <td>0.0145</td> <td>11.9</td> <td>3.22</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.64453125</td> <td>0.30921875</td> <td>0.0161</td> <td>0.0156</td> <td>11.6</td> <td>2.95</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.695</td> <td>0.338125</td> <td>0.0161</td> <td>0.0155</td> <td>11.9</td> <td>3.21</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.6490625</td> <td>0.2953125</td> <td>0.0174</td> <td>0.0161</td> <td>11.6</td> <td>2.91</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.74875</td> <td>0.34421875</td> <td>0.0161</td> <td>0.0157</td> <td>11.9</td> <td>3.22</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.6309375</td> <td>0.29796875</td> <td>0.0161</td> <td>0.0152</td> <td>11.6</td> <td>2.89</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.2646875</td> <td>1.593125</td> <td>0.185</td> <td>0.175</td> <td>98.5</td> <td>191</td> <td>190</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>11.12515625</td> <td>5.41359375</td> <td>0.404</td> <td>0.394</td> <td>136</td> <td>66.5</td> <td>103</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>2.95484375</td> <td>1.439375</td> <td>0.196</td> <td>0.186</td> <td>128</td> <td>35.6</td> <td>190</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.244375</td> <td>1.57625</td> <td>3.38</td> <td>3.35</td> <td>128</td> <td>222</td> <td>190</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>13.975</td> <td>8.291875</td> <td>3.78</td> <td>3.70</td> <td>135</td> <td>102</td> <td>103</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="cc1 Set, tps 2700.">
+                <h2>Benchmark round: cc1 Set, tps 2700.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 2700
+</pre>
+                        <h3>Performance metrics for cc1 Set, tps 2700.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2700.</td> <td>24440</td> <td>46</td> <td>2428.9</td> <td>1.73</td> <td>0.11</td> <td>1.12</td> <td>2223.8</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2700.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>98.36</td> <td>52.75</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.689375</td> <td>0.321875</td> <td>0.0156</td> <td>0.0146</td> <td>11.7</td> <td>3.13</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.665</td> <td>0.288125</td> <td>0.0156</td> <td>0.0152</td> <td>11.4</td> <td>2.82</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.71984375</td> <td>0.33484375</td> <td>0.0161</td> <td>0.0156</td> <td>11.7</td> <td>3.11</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.65890625</td> <td>0.3075</td> <td>0.0169</td> <td>0.0158</td> <td>11.5</td> <td>2.88</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.72453125</td> <td>0.3296875</td> <td>0.0161</td> <td>0.0153</td> <td>11.7</td> <td>3.13</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.66140625</td> <td>0.288125</td> <td>0.0153</td> <td>0.0148</td> <td>11.4</td> <td>2.82</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.19078125</td> <td>1.540625</td> <td>0.196</td> <td>0.184</td> <td>97.1</td> <td>188</td> <td>187</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>10.87671875</td> <td>5.3115625</td> <td>0.433</td> <td>0.420</td> <td>134</td> <td>65.3</td> <td>101</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>2.8915625</td> <td>1.3590625</td> <td>0.199</td> <td>0.191</td> <td>126</td> <td>34.6</td> <td>187</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.13984375</td> <td>1.49265625</td> <td>3.49</td> <td>3.45</td> <td>126</td> <td>218</td> <td>187</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>13.55203125</td> <td>8.264375</td> <td>3.87</td> <td>3.82</td> <td>133</td> <td>100</td> <td>101</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for cc1 Set, tps 2700.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>cc1 Set, tps 2700.</td> <td>24470</td> <td>46</td> <td>2435.8</td> <td>1.69</td> <td>0.33</td> <td>1.13</td> <td>2226.5</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for cc1 Set, tps 2700.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>98.96</td> <td>52.73</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [GB]</th> <th>Memory(avg) [GB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.695</td> <td>0.33171875</td> <td>0.0150</td> <td>0.0144</td> <td>11.7</td> <td>3.15</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc3_1.0-2e2112b64a5abb807463da3ebe8d118e0ef28320d56932cf6ff67bd3a3a8da13</td> <td>0.60953125</td> <td>0.28140625</td> <td>0.0161</td> <td>0.0156</td> <td>11.5</td> <td>2.92</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.69796875</td> <td>0.33046875</td> <td>0.0161</td> <td>0.0154</td> <td>11.8</td> <td>3.16</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc2_1.0-2d02fff8732d98af9ce0c9ee5b1b07e067c6d0954be6797907467259ef662d6f</td> <td>0.63734375</td> <td>0.2921875</td> <td>0.0173</td> <td>0.0161</td> <td>11.5</td> <td>2.90</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.7215625</td> <td>0.3309375</td> <td>0.0165</td> <td>0.0159</td> <td>11.7</td> <td>3.14</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>0.6503125</td> <td>0.284375</td> <td>0.0153</td> <td>0.0150</td> <td>11.4</td> <td>2.87</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>0.0105</td> <td>0.0105</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>3.31015625</td> <td>1.5375</td> <td>0.194</td> <td>0.185</td> <td>97.2</td> <td>188</td> <td>188</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>11.35859375</td> <td>5.46203125</td> <td>0.443</td> <td>0.435</td> <td>134</td> <td>65.5</td> <td>102</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>2.99671875</td> <td>1.4165625</td> <td>0.202</td> <td>0.193</td> <td>126</td> <td>35.1</td> <td>188</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>3.50421875</td> <td>1.56734375</td> <td>3.57</td> <td>3.54</td> <td>126</td> <td>219</td> <td>188</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>14.280625</td> <td>8.4521875</td> <td>4.00</td> <td>3.90</td> <td>133</td> <td>101</td> <td>187</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;">
+                <h2>Test Environment</h2>
+                <h3>benchmark config</h3>
+                <pre id="benchmarkInfo" style="overflow: visible;white-space: pre-wrap;max-height:100%;">workers:
+  number: 20
+rounds:
+  - label: &#39;cc1 Set, tps 2500.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2500
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+  - label: &#39;cc1 Set, tps 2500.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2500
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+  - label: &#39;cc1 Set, tps 2600.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2600
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+  - label: &#39;cc1 Set, tps 2600.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2600
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+  - label: &#39;cc1 Set, tps 2700.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2700
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+  - label: &#39;cc1 Set, tps 2700.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 2700
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;demo&#x2F;set.js
+</pre>
+                <h3>SUT</h3>
+                <pre id="sutdetails">not provided</pre>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

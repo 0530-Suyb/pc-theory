@@ -1,0 +1,13 @@
+round0_dependentTxs_C_use_time.txt: 197
+round1_dependentTxs_C_use_time.txt: 196
+round2_dependentTxs_C_use_time.txt: 133
+round3_dependentTxs_C_use_time.txt: 133
+round4_dependentTxs_C_use_time.txt: 147
+round5_dependentTxs_C_use_time.txt: 125
+round6_dependentTxs_C_use_time.txt: 145
+round7_dependentTxs_C_use_time.txt: 144
+
+196	499.8	0.2
+133	998.5	0.14
+125	1497.6	0.14
+144	1989.2	0.15

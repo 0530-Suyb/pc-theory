@@ -1,0 +1,49 @@
+blockNumber: 0
+1
+blockNumber: 41
+1
+blockNumber: 81
+1
+blockNumber: 109
+1
+blockNumber: 153
+1
+blockNumber: 196
+1
+blockNumber: 240
+0.9690558888538049
+blockNumber: 273
+0.9890482104550073
+blockNumber: 314
+0.9992164763823596
+blockNumber: 358
+1
+blockNumber: 401
+1
+blockNumber: 449
+1
+blockNumber: 494
+0.9743022723806619
+blockNumber: 537
+0.9604649115083208
+blockNumber: 574
+0.9974057683503739
+blockNumber: 621
+1
+blockNumber: 653
+1
+blockNumber: 698
+1
+blockNumber: 711
+0.9960857820166492
+blockNumber: 758
+0.9791773925976774
+blockNumber: 793
+0.9973357015985791
+blockNumber: 835
+0.9978495983808741
+blockNumber: 877
+1
+blockNumber: 914
+1
+blockNumber: 958

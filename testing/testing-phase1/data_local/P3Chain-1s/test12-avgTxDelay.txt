@@ -1,0 +1,41 @@
+blockNumber: 0
+1.358
+blockNumber: 14
+1.322
+blockNumber: 28
+1.374
+blockNumber: 41
+1.398
+blockNumber: 55
+1.381
+blockNumber: 69
+1.344
+blockNumber: 82
+1.351
+blockNumber: 96
+1.415
+blockNumber: 110
+1.382
+blockNumber: 124
+1.356
+blockNumber: 138
+1.353
+blockNumber: 152
+1.405
+blockNumber: 166
+1.386
+blockNumber: 180
+1.382
+blockNumber: 194
+1.372
+blockNumber: 208
+1.356
+blockNumber: 222
+1.35
+blockNumber: 236
+1.393
+blockNumber: 250
+1.37
+blockNumber: 264
+1.356
+blockNumber: 278

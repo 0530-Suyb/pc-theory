@@ -1,0 +1,28 @@
+# 3 pools but just pool3 has txs
+# 1s new a round
+test1 100->1000
+test2 100->1000
+test3 1000->500
+test4 1000->500 重启电脑
+
+test12 1100->2000
+
+# 1 pools
+test5 1000->500
+test6 1000->500
+test7 100->1000
+
+test13 1100->2000
+
+# 3 pools and 3 types of txs
+test8 100->1000 1s
+test9 100->1000 1.5s
+test10 100->1000 2s
+test11 100->1000 2s
+
+test14 1100->2000 2s
+
+# 待测
+# 开启check
+
+

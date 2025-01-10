@@ -1,0 +1,91 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Implement and initialize PC modules on node \textit{n\textsubscript{i}}}
+\begin{algorithmic}[1]
+
+\Require \normalsize \textit{TPM} \footnotesize The map of Tx types and pool name it allocated, \normalsize \textit{PNs} \footnotesize pool names, \normalsize \textit{PFNs} \footnotesize pool filter names, \normalsize \textit{PSNs} \footnotesize pool selector names, \normalsize \textit{PONs} \footnotesize pool orderer names, \normalsize \textit{PMNs} \footnotesize pool mid-processer names \normalsize
+
+\State \textbf{Dict} \textit{PC\_FILTER} = \{"F\textsubscript{n}": Filter\textsubscript{n}, \dots\}
+\State \textbf{Dict} \textit{PC\_SELECT} = \{"S\textsubscript{n}": Select\textsubscript{n}, \dots\}
+\State \textbf{Dict} \textit{PC\_ORDER} = \{"O\textsubscript{n}": Order\textsubscript{n}, \dots\}
+\State \textbf{Dict} \textit{PC\_MIDPROC} = \{"M\textsubscript{n}": MidProc\textsubscript{n}, \dots\}
+
+\State \textbf{Function} Filter\textsubscript{n}(\textit{Tx}): \footnotesize // Output ifPass \normalsize
+    \State \hspace{5mm} \small Filter \textit{Tx} according to your rules \normalsize
+
+\State \textbf{Function} Select\textsubscript{n}(\textit{Txs}): \footnotesize // Output TxsSelected \normalsize
+    \State \hspace{5mm} \small Select \textit{Tx} subset from \textit{Txs} according to your rule \normalsize
+
+\State \textbf{Function} Order\textsubscript{n}(\textit{Txs}): \footnotesize // Output TxsOrdered \normalsize
+    \State \hspace{5mm} \small Order \textit{Txs} according to your rule \normalsize
+
+\State \textbf{Function} MidProc\textsubscript{n}(\textit{Txs}, \textit{sandbox}): \footnotesize // Output TxsProcd \normalsize
+    \State \hspace{5mm} \textbf{foreach} \textit{Tx} in \textit{Txs} \textbf{do}
+        \State \hspace{10mm} \textit{\{Tx.RS, Tx.WS\}} $\leftarrow{}$ Execute \textit{Tx} in \textit{sandbox}
+        \State \hspace{10mm} \textit{Tx.WS} $\rightarrow{}$ \textit{sandbox} and \textit{Tx.Exed}=\textit{true}
+        
+\State \textbf{Function} CreatePCers():
+    \State \hspace{5mm} \textbf{foreach} \textit{PN} in \textit{PNs} \textbf{do}
+        \State \hspace{10mm} \textit{PCer.Filter} = \textit{PC\_FILTER[PFNs[Idx]]}
+        \State \hspace{10mm} \textit{PCer.Selector} = \textit{PC\_SELECT[PSNs[Idx]]}
+        \State \hspace{10mm} \textit{PCer.Orderer} = \textit{PC\_ORDER[PONs[Idx]]}
+        \State \hspace{10mm} \textit{PCer.MidProcer} = \textit{PC\_MIDPROC[PMNs[Idx]]}
+        \State \hspace{10mm} \textit{PCers[PN]} = \textit{PCer}
+        
+    \State \hspace{5mm} \textbf{Return} \textit{PCers}
+
+\State \textit{ni.Sorter} = \textit{TPM}
+\State \textit{ni.PCers} = CreatePCers()
+
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{PC Order and Execution at node \textit{n\textsubscript{i}}}
+\begin{algorithmic}[1]
+
+\Require \footnotesize local world state \normalsize \textit{LWS} \footnotesize, sandbox \normalsize \textit{SB} \footnotesize based on \textit{LWS} which is cleared when \textit{LWS} is updated \normalsize
+
+\State \textbf{Upon} reception of \textit{Tx} \textbf{parallel do}
+    \State \hspace{5mm} \textit{PCer} = \textit{n\textsubscript{i}.PCers[n\textsubscript{i}.Sorter[Tx.Type]]}
+    \State \hspace{5mm} \textbf{If} \textit{PCer.Filter(Tx)} == \textit{true} \textbf{then}
+        \State \hspace{10mm} \textit{Tx} $\rightarrow{}$ \textit{PCer.Pool.PendingTxs}
+        
+\State \textbf{foreach} \textit{PCer} in \textit{n\textsubscript{i}.PCers} \textbf{parallel do}
+    \State \hspace{5mm} \textbf{Upon} \textit{PCer}’s START strategy is triggered \textbf{do}
+        \State \hspace{10mm} \footnotesize // PC modules inserted in consensus flow \normalsize
+        \State \hspace{10mm} \textit{TxsSelected} = \textit{PCer.Selector(PCer.Pool.PendingTxs)}
+        \State \hspace{10mm} \textit{TxsOrdered} = \textit{PCer.Orderer(TxsSelected)}
+        \State \hspace{10mm} \textit{TxsProcd} = \textit{PCer.MidProcer(TxsOrdered, SB)}
+        \State \hspace{10mm} \textit{B\textsubscript{n}.Txs} = \textit{TxsProcd}
+        \State \hspace{10mm} \textit{B\textsubscript{n}.BlkID} = \textit{Hash(B\textsubscript{n})} \footnotesize // \textit{B\textsubscript{n}.PrevBlkHash} isn't set \normalsize
+        \State \hspace{10mm} \textit{B\textsubscript{n}} $\rightarrow{}$ \textit{n\textsubscript{i}.BlkPool}
+
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{PC Validation at node \textit{n\textsubscript{i}}}
+\begin{algorithmic}[1]
+
+\Require \footnotesize Global world state \normalsize \textit{GWS} \footnotesize, sandbox \normalsize \textit{SB} \footnotesize on \textit{GWS} \normalsize
+
+\State \small Nodes fetch \textit{B} from \textit{BlkPool} in a deterministic method \normalsize
+\State \textbf{foreach} \textit{Tx} in \textit{B.Txs} \textbf{do} DetectConflict(\textit{Tx}, \textit{SB})
+\State \small validate \textit{B.SIGs}, blockchain $\leftarrow{}$ \textit{B}, update \textit{GWS} \normalsize
+
+\State \textbf{Function} DetectConflict(\textit{Tx}, \textit{sandbox}):
+    \State \hspace{5mm} \textbf{foreach} \textit{r} in \textit{Tx.RS} \textbf{do}
+        \State \hspace{10mm} \textbf{if} \textit{r.value} != \textit{sandbox[r.key]} \textbf{then} \textbf{Return}
+    \State \hspace{5mm} \textbf{foreach} \textit{w} in \textit{Tx.WS} \textbf{do} \textit{sandbox[w.key]} = \textit{w.value}
+
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}

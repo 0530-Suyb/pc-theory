@@ -1,0 +1,654 @@
+<!doctype html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+    function plotChart(divId, chartData) {
+        // Convert from stringified html, to valid JSON
+        const chartDetails = JSON.parse(chartData.replace(/&quot;/g,'"'));
+        new Chart(document.getElementById(divId), {
+            type: chartDetails.type,
+            data: {
+                labels: chartDetails.labels,
+                datasets: chartDetails.datasets
+            },
+            options: {
+                legend: { display: chartDetails.legend },
+                title: {
+                    display: true,
+                    text: chartDetails.title
+                }
+            }
+        });
+    }
+</script>
+<html>
+<head>
+    <title>Hyperledger Caliper Report</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+        .left-column {
+            position: fixed;
+            width:20%;
+        }
+        .left-column ul {
+            display: block;
+            padding: 0;
+            list-style: none;
+            border-bottom: 1px solid #d9d9d9;
+            font-size: 14px;
+        }
+        .left-column h2{
+            font-size: 24px;
+            font-weight: 400;
+            margin-block-end: 0.5em;
+        }
+        .left-column h3{
+            font-size: 18px;
+            font-weight: 400;
+            margin-block-end: 0.5em;
+        }
+        .left-column li{
+            margin-left: 10px;
+            margin-bottom: 5px;
+            color: #5e6b73;
+        }
+        .right-column {
+            margin-left: 22%;
+            width:60%;
+        }
+        .right-column table {
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .right-column h2{
+            font-weight: 400;
+        }
+        .right-column h3{
+            font-weight: 400;
+        }
+        .right-column h4 {
+            font-weight: 400;
+            margin-block-end: 0;
+        }
+        .right-column th {
+            border-width: 1px;
+            font-size: small;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #f2f2f2;
+        }
+        .right-column td {
+            border-width: 1px;
+            font-size: small;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+            font-weight: 400;
+        }
+        .tag {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+        }
+        pre {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            overflow:auto;
+            max-height:300px;
+            font-size:12px;
+        }
+        .charting {
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            page-break-inside: auto;
+        }
+        .chart {
+            display:flex;
+            flex:1;
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body style="font-family: IBM Plex Sans; font-weight: 200;">
+    <main>
+        <div class="left-column">
+            <img src="https://hyperledger.github.io/caliper/assets/img/hyperledger_caliper_logo_color.png" style="width:95%;" alt="">
+            <ul>
+                <h3>&nbspBasic information</h3>
+                <li>DLT: &nbsp<span style="font-weight: 500;">fabric</span></li>
+                <li>Name: &nbsp<span style="font-weight: 500;"></span></li>
+                <li>Description: &nbsp<span style="font-weight: 500;"></span></li>
+                <li>Benchmark Rounds: &nbsp<span style="font-weight: 500;">6</span></li>
+                <li><a href="#benchmarkInfo">Details</a></li>
+            </ul>
+            <ul>
+                <h3>&nbspBenchmark results</h3>
+                <li><a href="#benchmarksummary">Summary</a></li>
+                    <li><a href="#conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.">conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</a></li>
+                    <li><a href="#conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.">conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</a></li>
+                    <li><a href="#conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.">conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</a></li>
+            </ul>
+            <ul>
+                <h3>&nbspSystem under test</h3>
+                <li><a href="#sutdetails">Details</a></li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <h1 style="padding-top: 3em; font-weight: 500;">Caliper report</h1>
+            <div style="border-bottom: 1px solid #d9d9d9; margin-bottom: 10px;" id="benchmarksummary">
+                <table style="min-width: 100%;">
+                    <h3>Summary of performance metrics</h3>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                    </tr>
+
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</td> <td>5852</td> <td>4156</td> <td>1000.6</td> <td>0.25</td> <td>0.04</td> <td>0.13</td> <td>992.8</td>
+                    </tr>
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</td> <td>5066</td> <td>4942</td> <td>999.5</td> <td>0.22</td> <td>0.04</td> <td>0.13</td> <td>994.4</td>
+                    </tr>
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</td> <td>3388</td> <td>6620</td> <td>999.1</td> <td>0.21</td> <td>0.04</td> <td>0.13</td> <td>994.5</td>
+                    </tr>
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</td> <td>3538</td> <td>6470</td> <td>1000.0</td> <td>0.21</td> <td>0.04</td> <td>0.13</td> <td>994.7</td>
+                    </tr>
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</td> <td>6367</td> <td>3639</td> <td>997.3</td> <td>1.02</td> <td>0.04</td> <td>0.13</td> <td>905.5</td>
+                    </tr>
+                    <tr>
+                         <td>conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</td> <td>5876</td> <td>4132</td> <td>999.7</td> <td>0.25</td> <td>0.04</td> <td>0.13</td> <td>994.6</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.">
+                <h2>Benchmark round: conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 1000
+</pre>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</td> <td>5852</td> <td>4156</td> <td>1000.6</td> <td>0.25</td> <td>0.04</td> <td>0.13</td> <td>992.8</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>98.78</td> <td>44.87</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.2653125</td> <td>0.62015625</td> <td>15.2</td> <td>13.8</td> <td>16.9</td> <td>6.42</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.238125</td> <td>0.619375</td> <td>15.2</td> <td>14.2</td> <td>16.9</td> <td>6.46</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.9190625</td> <td>0.441875</td> <td>78.2</td> <td>58.3</td> <td>52.1</td> <td>14.6</td> <td>76.5</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>4.74453125</td> <td>2.3828125</td> <td>264</td> <td>245</td> <td>58.1</td> <td>36.0</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.13546875</td> <td>0.56203125</td> <td>87.5</td> <td>66.8</td> <td>40.7</td> <td>115</td> <td>76.5</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.07515625</td> <td>2.04640625</td> <td>149</td> <td>138</td> <td>58.0</td> <td>30.0</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.12984375</td> <td>0.54375</td> <td>71.1</td> <td>60.7</td> <td>52.4</td> <td>52.3</td> <td>76.5</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</td> <td>5066</td> <td>4942</td> <td>999.5</td> <td>0.22</td> <td>0.04</td> <td>0.13</td> <td>994.4</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>81.56</td> <td>40.52</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.2903125</td> <td>0.6228125</td> <td>15.1</td> <td>14.2</td> <td>17.0</td> <td>6.51</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.310625</td> <td>0.6428125</td> <td>15.4</td> <td>14.7</td> <td>17.0</td> <td>6.54</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.89125</td> <td>0.435</td> <td>73.5</td> <td>64.9</td> <td>52.0</td> <td>14.4</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>5.00078125</td> <td>2.49640625</td> <td>323</td> <td>307</td> <td>58.2</td> <td>36.1</td> <td>43.4</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.169375</td> <td>0.5771875</td> <td>84.7</td> <td>73.9</td> <td>40.8</td> <td>115</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.320625</td> <td>2.14390625</td> <td>159</td> <td>150</td> <td>58.1</td> <td>30.1</td> <td>43.4</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.0971875</td> <td>0.54234375</td> <td>81.9</td> <td>71.9</td> <td>52.4</td> <td>52.3</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.">
+                <h2>Benchmark round: conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 1000
+</pre>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</td> <td>3388</td> <td>6620</td> <td>999.1</td> <td>0.21</td> <td>0.04</td> <td>0.13</td> <td>994.5</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>73.22</td> <td>37.71</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.23109375</td> <td>0.605</td> <td>14.9</td> <td>14.3</td> <td>16.6</td> <td>6.06</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.17140625</td> <td>0.584375</td> <td>16.0</td> <td>14.4</td> <td>16.6</td> <td>6.06</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.88359375</td> <td>0.44</td> <td>77.8</td> <td>69.3</td> <td>52.3</td> <td>14.7</td> <td>76.6</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>4.76546875</td> <td>2.40265625</td> <td>359</td> <td>347</td> <td>57.8</td> <td>35.7</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.16546875</td> <td>0.56421875</td> <td>91.9</td> <td>80.9</td> <td>40.7</td> <td>115</td> <td>76.6</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.25234375</td> <td>2.135625</td> <td>163</td> <td>160</td> <td>57.7</td> <td>29.7</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.10515625</td> <td>0.5403125</td> <td>83.1</td> <td>75.1</td> <td>52.5</td> <td>52.5</td> <td>76.6</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</td> <td>3538</td> <td>6470</td> <td>1000.0</td> <td>0.21</td> <td>0.04</td> <td>0.13</td> <td>994.7</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>68.67</td> <td>36.84</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.20046875</td> <td>0.5946875</td> <td>15.6</td> <td>14.4</td> <td>16.9</td> <td>6.38</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.244375</td> <td>0.60890625</td> <td>15.4</td> <td>14.4</td> <td>16.9</td> <td>6.41</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.89140625</td> <td>0.426875</td> <td>81.3</td> <td>68.2</td> <td>52.2</td> <td>14.6</td> <td>77.1</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>4.7978125</td> <td>2.40890625</td> <td>410</td> <td>394</td> <td>58.2</td> <td>36.1</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.139375</td> <td>0.55171875</td> <td>91.7</td> <td>78.1</td> <td>40.7</td> <td>115</td> <td>77.1</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.15921875</td> <td>2.0859375</td> <td>170</td> <td>165</td> <td>58.0</td> <td>30.0</td> <td>40.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.189375</td> <td>0.5534375</td> <td>88.9</td> <td>73.7</td> <td>52.5</td> <td>52.4</td> <td>77.1</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.">
+                <h2>Benchmark round: conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">txDuration: 10
+rateControl:
+  type: fixed-rate
+  opts:
+    tps: 1000
+</pre>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</td> <td>6367</td> <td>3639</td> <td>997.3</td> <td>1.02</td> <td>0.04</td> <td>0.13</td> <td>905.5</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>67.11</td> <td>34.58</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.255</td> <td>0.5515625</td> <td>16.0</td> <td>14.1</td> <td>16.9</td> <td>6.41</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.22859375</td> <td>0.52875</td> <td>14.7</td> <td>14.1</td> <td>17.0</td> <td>6.45</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.8859375</td> <td>0.37828125</td> <td>76.6</td> <td>66.2</td> <td>52.4</td> <td>14.8</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>4.85703125</td> <td>2.20484375</td> <td>484</td> <td>456</td> <td>58.1</td> <td>36.0</td> <td>43.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.1934375</td> <td>0.5103125</td> <td>87.2</td> <td>73.7</td> <td>40.7</td> <td>115</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.28265625</td> <td>1.891875</td> <td>186</td> <td>180</td> <td>58.0</td> <td>30.0</td> <td>43.3</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.15265625</td> <td>0.49734375</td> <td>83.9</td> <td>72.7</td> <td>52.3</td> <td>52.1</td> <td>76.3</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                        <h3>Performance metrics for conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</td> <td>5876</td> <td>4132</td> <td>999.7</td> <td>0.25</td> <td>0.04</td> <td>0.13</td> <td>994.6</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.</h3>
+                            <h4>Resource monitor: process</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>node(avg)</td> <td>69.00</td> <td>36.19</td> <td>-</td> <td>-</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [MB]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org1.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.25875</td> <td>0.61578125</td> <td>15.7</td> <td>14.4</td> <td>17.0</td> <td>6.49</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;dev-peer0.org2.example.com-cc1_1.0-f66365172e6362a7471c1fe14ca3b506cc5b0358c676b677d03489626a1bdb64</td> <td>1.25625</td> <td>0.62375</td> <td>15.8</td> <td>14.7</td> <td>17.1</td> <td>6.54</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;cli</td> <td>0</td> <td>0</td> <td>10.8</td> <td>10.8</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer3.example.com</td> <td>0.87328125</td> <td>0.43734375</td> <td>85.2</td> <td>73.2</td> <td>52.1</td> <td>14.5</td> <td>76.7</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org1.example.com</td> <td>4.83640625</td> <td>2.4459375</td> <td>502</td> <td>490</td> <td>58.3</td> <td>36.2</td> <td>40.4</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer2.example.com</td> <td>1.163125</td> <td>0.565</td> <td>93.6</td> <td>81.3</td> <td>40.8</td> <td>116</td> <td>76.7</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;peer0.org2.example.com</td> <td>4.195</td> <td>2.10203125</td> <td>186</td> <td>179</td> <td>58.2</td> <td>30.2</td> <td>40.4</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>&#x2F;orderer.example.com</td> <td>1.11859375</td> <td>0.53125</td> <td>90.6</td> <td>78.5</td> <td>52.3</td> <td>52.3</td> <td>76.7</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;">
+                <h2>Test Environment</h2>
+                <h3>benchmark config</h3>
+                <pre id="benchmarkInfo" style="overflow: visible;white-space: pre-wrap;max-height:100%;">workers:
+  number: 8
+rounds:
+  - label: &#39;conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 100
+        rateOfSet: 4
+  - label: &#39;conflict txs, tps 1000, k in [1 100], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 100
+        rateOfSet: 4
+  - label: &#39;conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 1000
+        rateOfSet: 4
+  - label: &#39;conflict txs, tps 1000, k in [1 1000], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 1000
+        rateOfSet: 4
+  - label: &#39;conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 5000
+        rateOfSet: 4
+  - label: &#39;conflict txs, tps 1000, k in [1 5000], get:set&#x3D;3:1.&#39;
+    txDuration: 10
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 1000
+    workload:
+      module: benchmarks&#x2F;samples&#x2F;fabric&#x2F;pcFuncTest&#x2F;conflictTxs.js
+      arguments:
+        maxK: 5000
+        rateOfSet: 4
+</pre>
+                <h3>SUT</h3>
+                <pre id="sutdetails">not provided</pre>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

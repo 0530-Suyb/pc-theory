@@ -1,0 +1,17 @@
+blockNumber: 0
+1.299
+blockNumber: 197
+1.295
+blockNumber: 393
+1.338
+blockNumber: 494
+1.305
+blockNumber: 596
+1.334
+blockNumber: 668
+1.369
+blockNumber: 737
+1.526
+blockNumber: 792
+1.585
+blockNumber: 846

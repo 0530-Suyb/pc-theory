@@ -1,0 +1,49 @@
+blockNumber: 1077
+1
+blockNumber: 1127
+1
+blockNumber: 1175
+1
+blockNumber: 1221
+1
+blockNumber: 1269
+1
+blockNumber: 1315
+1
+blockNumber: 1362
+1
+blockNumber: 1407
+0.9638196915776986
+blockNumber: 1451
+1
+blockNumber: 1500
+1
+blockNumber: 1550
+1
+blockNumber: 1597
+1
+blockNumber: 1644
+0.9886140291426635
+blockNumber: 1691
+1
+blockNumber: 1735
+1
+blockNumber: 1783
+1
+blockNumber: 1831
+1
+blockNumber: 1877
+1
+blockNumber: 1923
+0.9864696190523741
+blockNumber: 1971
+0.9912084561439171
+blockNumber: 2016
+0.9972791478522636
+blockNumber: 2062
+1
+blockNumber: 2107
+1
+blockNumber: 2157
+1
+blockNumber: 2204

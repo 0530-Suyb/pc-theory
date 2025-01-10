@@ -1,0 +1,17 @@
+blockNumber: 800
+1.324
+blockNumber: 993
+1.343
+blockNumber: 1177
+1.395
+blockNumber: 1271
+1.37
+blockNumber: 1367
+1.446
+blockNumber: 1429
+1.51
+blockNumber: 1489
+1.422
+blockNumber: 1539
+1.388
+blockNumber: 1589

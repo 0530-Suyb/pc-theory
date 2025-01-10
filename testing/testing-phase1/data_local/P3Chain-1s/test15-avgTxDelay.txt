@@ -1,0 +1,81 @@
+blockNumber: 0
+2.528
+blockNumber: 153
+2.529
+blockNumber: 306
+2.571
+blockNumber: 384
+2.485
+blockNumber: 462
+2.508
+blockNumber: 516
+2.448
+blockNumber: 570
+2.45
+blockNumber: 609
+2.479
+blockNumber: 648
+2.56
+blockNumber: 681
+2.59
+blockNumber: 714
+2.478
+blockNumber: 744
+2.493
+blockNumber: 774
+2.478
+blockNumber: 801
+2.351
+blockNumber: 825
+2.472
+blockNumber: 849
+2.534
+blockNumber: 870
+2.405
+blockNumber: 891
+2.519
+blockNumber: 915
+2.415
+blockNumber: 939
+2.541
+blockNumber: 960
+2.448
+blockNumber: 981
+2.546
+blockNumber: 1005
+2.441
+blockNumber: 1029
+2.467
+blockNumber: 1050
+2.413
+blockNumber: 1071
+2.527
+blockNumber: 1095
+2.46
+blockNumber: 1119
+2.573
+blockNumber: 1140
+2.507
+blockNumber: 1161
+2.492
+blockNumber: 1185
+2.472
+blockNumber: 1209
+2.498
+blockNumber: 1230
+2.459
+blockNumber: 1251
+2.475
+blockNumber: 1275
+2.501
+blockNumber: 1299
+2.557
+blockNumber: 1320
+2.52
+blockNumber: 1341
+2.432
+blockNumber: 1362
+2.457
+blockNumber: 1386
+2.391
+blockNumber: 1410

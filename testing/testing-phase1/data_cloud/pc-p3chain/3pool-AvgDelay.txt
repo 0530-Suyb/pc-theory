@@ -1,0 +1,82 @@
+3pool 0.5s pack
+blockNumber: 0
+1.334
+blockNumber: 61
+1.328
+blockNumber: 123
+1.375
+blockNumber: 186
+1.424
+blockNumber: 249
+1.398
+blockNumber: 312
+1.415
+blockNumber: 375
+1.395
+blockNumber: 438
+1.383
+blockNumber: 501
+1.389
+blockNumber: 564
+1.399
+blockNumber: 627
+1.383
+blockNumber: 689
+1.407
+blockNumber: 752
+1.456
+blockNumber: 815
+1.513
+blockNumber: 878
+1.436
+blockNumber: 941
+1.501
+blockNumber: 1004
+1.447
+blockNumber: 1066
+1.44
+blockNumber: 1129
+1.449
+blockNumber: 1192
+1.483
+blockNumber: 1255
+1.522
+blockNumber: 1318
+1.551
+blockNumber: 1381
+1.608
+blockNumber: 1444
+1.571
+blockNumber: 1509
+1.666
+blockNumber: 1575
+1.713
+blockNumber: 1641
+1.586
+blockNumber: 1707
+1.582
+blockNumber: 1773
+1.709
+blockNumber: 1838
+1.994
+blockNumber: 1901
+1.955
+blockNumber: 1964
+1.835
+blockNumber: 2027
+2.125
+blockNumber: 2090
+2.11
+blockNumber: 2153
+1.952
+blockNumber: 2215
+2.177
+blockNumber: 2278
+2.193
+blockNumber: 2341
+2.287
+blockNumber: 2403
+2.216
+blockNumber: 2466
+2.215
+blockNumber: 2526

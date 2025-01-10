@@ -1,0 +1,29 @@
+round0_dependentTxs_C_use_time.txt: 244
+round1_dependentTxs_C_use_time.txt: 242
+round2_dependentTxs_C_use_time.txt: 235
+round3_dependentTxs_C_use_time.txt: 246
+
+round4_dependentTxs_C_use_time.txt: 251
+round5_dependentTxs_C_use_time.txt: 256
+round6_dependentTxs_C_use_time.txt: 247
+round7_dependentTxs_C_use_time.txt: 249
+
+round8_dependentTxs_C_use_time.txt: 367
+round9_dependentTxs_C_use_time.txt: 373
+round10_dependentTxs_C_use_time.txt: 401
+round11_dependentTxs_C_use_time.txt: 435
+
+round12_dependentTxs_C_use_time.txt: 472
+round14_dependentTxs_C_use_time.txt: 443
+round15_dependentTxs_C_use_time.txt: 461
+
+2000_round0_dependentTxs_C_use_time.txt: 476
+2000_round1_dependentTxs_C_use_time.txt: 464
+2000_round2_dependentTxs_C_use_time.txt: 455
+2000_round3_dependentTxs_C_use_time.txt: 459
+
+
+246  499.2    0.2
+256  997.3    0.16
+367  1489.6  0.18
+443  1606.3  0.2

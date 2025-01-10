@@ -1,0 +1,27 @@
+# one channel one pool
+# batchtimeout 1s
+# MaxMessageCount: 300
+# AbsoluteMaxBytes: 99 MB
+# PreferredMaxBytes: 512 KB
+test1 第一次开机正常测试 100 -> 1000
+test2 第二次重启网络测试 100 -> 1000
+test3 第三次重启电脑测试 100 -> 1000
+test4 1000 -> 100
+
+test14 1000->2000
+test15 1000->2000
+
+# 3pool 3 type
+test5 100->1000
+test6 100->1000
+test7 1000->100
+
+test12 1000->2000
+test13 1000->2000
+
+# 3pool 1 type
+test8 100->1000
+test9 100->1000
+test10 1000->100
+
+test11 1000 -> 2000
