@@ -1,0 +1,591 @@
+Time     0.14s	Block    892	Tx    148	 
+From Orderer Time     0.14s	Block    892	 Tx    148
+From Orderer Time     0.15s	Block    893	 Tx    143
+Time     0.19s	Block    893	Tx    143	 
+From Orderer Time     0.21s	Block    894	 Tx    151
+From Orderer Time     0.27s	Block    895	 Tx    148
+Time     0.27s	Block    894	Tx    151	 
+From Orderer Time     0.31s	Block    896	 Tx    149
+Time     0.36s	Block    895	Tx    148	 
+From Orderer Time     0.38s	Block    897	 Tx    142
+Time     0.38s	Block    896	Tx    149	 
+From Orderer Time     0.42s	Block    898	 Tx    144
+Time     0.43s	Block    897	Tx    142	 
+From Orderer Time     0.47s	Block    899	 Tx    132
+Time     0.48s	Block    898	Tx    144	 
+From Orderer Time     0.51s	Block    900	 Tx    132
+Time     0.51s	Block    899	Tx    132	 
+Time     0.57s	Block    900	Tx    132	 
+From Orderer Time     0.62s	Block    901	 Tx    146
+From Orderer Time     0.64s	Block    902	 Tx    140
+Time     0.67s	Block    901	Tx    146	 
+From Orderer Time     0.67s	Block    903	 Tx    137
+From Orderer Time     0.71s	Block    904	 Tx    134
+Time     0.72s	Block    902	Tx    140	 
+Time     0.73s	Block    903	Tx    137	 
+From Orderer Time     0.76s	Block    905	 Tx    145
+Time     0.77s	Block    904	Tx    134	 
+Time     0.80s	Block    905	Tx    145	 
+From Orderer Time     0.81s	Block    906	 Tx    149
+From Orderer Time     0.88s	Block    907	 Tx    148
+From Orderer Time     0.95s	Block    908	 Tx    143
+Time     0.95s	Block    906	Tx    149	 
+Time     0.96s	Block    907	Tx    148	 
+From Orderer Time     0.99s	Block    909	 Tx    161
+Time     1.01s	Block    908	Tx    143	 
+From Orderer Time     1.04s	Block    910	 Tx    154
+Time     1.04s	Block    909	Tx    161	 
+Time     1.08s	Block    910	Tx    154	 
+From Orderer Time     1.08s	Block    911	 Tx    148
+Time     1.12s	Block    911	Tx    148	 
+From Orderer Time     1.15s	Block    912	 Tx    144
+From Orderer Time     1.21s	Block    913	 Tx    146
+Time     1.21s	Block    912	Tx    144	 
+Time     1.24s	Block    913	Tx    146	 
+From Orderer Time     1.27s	Block    914	 Tx    160
+Time     1.30s	Block    914	Tx    160	 
+From Orderer Time     1.33s	Block    915	 Tx    134
+Time     1.35s	Block    915	Tx    134	 
+From Orderer Time     1.38s	Block    916	 Tx    131
+Time     1.43s	Block    916	Tx    131	 
+From Orderer Time     1.44s	Block    917	 Tx    132
+From Orderer Time     1.50s	Block    918	 Tx    142
+Time     1.50s	Block    917	Tx    132	 
+Time     1.53s	Block    918	Tx    142	 
+From Orderer Time     1.55s	Block    919	 Tx    151
+Time     1.60s	Block    919	Tx    151	 
+From Orderer Time     1.63s	Block    920	 Tx    154
+Time     1.67s	Block    920	Tx    154	 
+From Orderer Time     1.68s	Block    921	 Tx    151
+Time     1.72s	Block    921	Tx    151	 
+From Orderer Time     1.73s	Block    922	 Tx    143
+Time     1.78s	Block    922	Tx    143	 
+From Orderer Time     1.78s	Block    923	 Tx    153
+Time     1.82s	Block    923	Tx    153	 
+From Orderer Time     1.83s	Block    924	 Tx    149
+Time     1.88s	Block    924	Tx    149	 
+From Orderer Time     1.89s	Block    925	 Tx    154
+From Orderer Time     1.92s	Block    926	 Tx    149
+Time     1.95s	Block    925	Tx    154	 
+Time     1.97s	Block    926	Tx    149	 
+From Orderer Time     2.00s	Block    927	 Tx    153
+Time     2.04s	Block    927	Tx    153	 
+From Orderer Time     2.04s	Block    928	 Tx    129
+Time     2.08s	Block    928	Tx    129	 
+From Orderer Time     2.10s	Block    929	 Tx    143
+From Orderer Time     2.15s	Block    930	 Tx    156
+Time     2.16s	Block    929	Tx    143	 
+Time     2.21s	Block    930	Tx    156	 
+From Orderer Time     2.23s	Block    931	 Tx    160
+Time     2.26s	Block    931	Tx    160	 
+From Orderer Time     2.27s	Block    932	 Tx    154
+Time     2.33s	Block    932	Tx    154	 
+From Orderer Time     2.34s	Block    933	 Tx    154
+Time     2.39s	Block    933	Tx    154	 
+From Orderer Time     2.40s	Block    934	 Tx    147
+Time     2.46s	Block    934	Tx    147	 
+From Orderer Time     2.47s	Block    935	 Tx    156
+Time     2.52s	Block    935	Tx    156	 
+From Orderer Time     2.53s	Block    936	 Tx    145
+Time     2.56s	Block    936	Tx    145	 
+From Orderer Time     2.60s	Block    937	 Tx    151
+Time     2.62s	Block    937	Tx    151	 
+From Orderer Time     2.67s	Block    938	 Tx    150
+Time     2.72s	Block    938	Tx    150	 
+From Orderer Time     2.73s	Block    939	 Tx    137
+From Orderer Time     2.77s	Block    940	 Tx    146
+Time     2.77s	Block    939	Tx    137	 
+From Orderer Time     2.80s	Block    941	 Tx    144
+Time     2.83s	Block    940	Tx    146	 
+Time     2.84s	Block    941	Tx    144	 
+From Orderer Time     2.86s	Block    942	 Tx    149
+Time     2.90s	Block    942	Tx    149	 
+From Orderer Time     2.91s	Block    943	 Tx    139
+Time     2.95s	Block    943	Tx    139	 
+From Orderer Time     2.97s	Block    944	 Tx    158
+Time     3.01s	Block    944	Tx    158	 
+From Orderer Time     3.03s	Block    945	 Tx    157
+From Orderer Time     3.04s	Block    946	 Tx      1
+Time     3.09s	Block    945	Tx    157	 
+From Orderer Time     3.10s	Block    947	 Tx    158
+Time     3.09s	Block    946	Tx      1	 
+Time     3.14s	Block    947	Tx    158	 
+From Orderer Time     3.16s	Block    948	 Tx    137
+Time     3.20s	Block    948	Tx    137	 
+From Orderer Time     3.22s	Block    949	 Tx    152
+Time     3.25s	Block    949	Tx    152	 
+From Orderer Time     3.29s	Block    950	 Tx    165
+Time     3.32s	Block    950	Tx    165	 
+From Orderer Time     3.34s	Block    951	 Tx    160
+Time     3.37s	Block    951	Tx    160	 
+From Orderer Time     3.39s	Block    952	 Tx    156
+Time     3.42s	Block    952	Tx    156	 
+From Orderer Time     3.45s	Block    953	 Tx    165
+Time     3.49s	Block    953	Tx    165	 
+From Orderer Time     3.51s	Block    954	 Tx    162
+Time     3.54s	Block    954	Tx    162	 
+From Orderer Time     3.57s	Block    955	 Tx    152
+Time     3.62s	Block    955	Tx    152	 
+From Orderer Time     3.63s	Block    956	 Tx    145
+Time     3.67s	Block    956	Tx    145	 
+From Orderer Time     3.69s	Block    957	 Tx    145
+Time     3.72s	Block    957	Tx    145	 
+From Orderer Time     3.74s	Block    958	 Tx    148
+Time     3.76s	Block    958	Tx    148	 
+From Orderer Time     3.80s	Block    959	 Tx    163
+From Orderer Time     3.85s	Block    960	 Tx    148
+Time     3.85s	Block    959	Tx    163	 
+Time     3.89s	Block    960	Tx    148	 
+From Orderer Time     3.90s	Block    961	 Tx    156
+Time     3.94s	Block    961	Tx    156	 
+From Orderer Time     3.95s	Block    962	 Tx    165
+From Orderer Time     4.01s	Block    963	 Tx    147
+Time     4.03s	Block    962	Tx    165	 
+From Orderer Time     4.03s	Block    964	 Tx     63
+Time     4.05s	Block    963	Tx    147	 
+Time     4.06s	Block    964	Tx     63	 
+From Orderer Time     4.10s	Block    965	 Tx    155
+Time     4.14s	Block    965	Tx    155	 
+From Orderer Time     4.17s	Block    966	 Tx    168
+From Orderer Time     4.24s	Block    967	 Tx    158
+Time     4.24s	Block    966	Tx    168	 
+From Orderer Time     4.29s	Block    968	 Tx    159
+Time     4.30s	Block    967	Tx    158	 
+From Orderer Time     4.32s	Block    969	 Tx    143
+Time     4.33s	Block    968	Tx    159	 
+Time     4.37s	Block    969	Tx    143	 
+From Orderer Time     4.40s	Block    970	 Tx    156
+Time     4.42s	Block    970	Tx    156	 
+From Orderer Time     4.46s	Block    971	 Tx    153
+Time     4.50s	Block    971	Tx    153	 
+From Orderer Time     4.53s	Block    972	 Tx    150
+Time     4.58s	Block    972	Tx    150	 
+From Orderer Time     4.60s	Block    973	 Tx    158
+Time     4.63s	Block    973	Tx    158	 
+From Orderer Time     4.65s	Block    974	 Tx    147
+Time     4.68s	Block    974	Tx    147	 
+From Orderer Time     4.70s	Block    975	 Tx    151
+Time     4.72s	Block    975	Tx    151	 
+From Orderer Time     4.75s	Block    976	 Tx    151
+Time     4.78s	Block    976	Tx    151	 
+From Orderer Time     4.81s	Block    977	 Tx    164
+Time     4.83s	Block    977	Tx    164	 
+From Orderer Time     4.86s	Block    978	 Tx    156
+Time     4.89s	Block    978	Tx    156	 
+From Orderer Time     4.91s	Block    979	 Tx    151
+Time     4.94s	Block    979	Tx    151	 
+From Orderer Time     4.97s	Block    980	 Tx    144
+Time     5.03s	Block    980	Tx    144	 
+From Orderer Time     5.03s	Block    981	 Tx    146
+From Orderer Time     5.04s	Block    982	 Tx     46
+Time     5.06s	Block    981	Tx    146	 
+Time     5.06s	Block    982	Tx     46	 
+From Orderer Time     5.09s	Block    983	 Tx    160
+Time     5.12s	Block    983	Tx    160	 
+From Orderer Time     5.15s	Block    984	 Tx    158
+Time     5.18s	Block    984	Tx    158	 
+From Orderer Time     5.21s	Block    985	 Tx    156
+Time     5.24s	Block    985	Tx    156	 
+From Orderer Time     5.27s	Block    986	 Tx    155
+Time     5.29s	Block    986	Tx    155	 
+From Orderer Time     5.31s	Block    987	 Tx    145
+Time     5.34s	Block    987	Tx    145	 
+From Orderer Time     5.36s	Block    988	 Tx    154
+Time     5.40s	Block    988	Tx    154	 
+From Orderer Time     5.42s	Block    989	 Tx    161
+Time     5.44s	Block    989	Tx    161	 
+From Orderer Time     5.48s	Block    990	 Tx    168
+Time     5.50s	Block    990	Tx    168	 
+From Orderer Time     5.55s	Block    991	 Tx    165
+From Orderer Time     5.60s	Block    992	 Tx    160
+Time     5.60s	Block    991	Tx    165	 
+From Orderer Time     5.64s	Block    993	 Tx    164
+Time     5.65s	Block    992	Tx    160	 
+Time     5.66s	Block    993	Tx    164	 
+From Orderer Time     5.69s	Block    994	 Tx    154
+Time     5.73s	Block    994	Tx    154	 
+From Orderer Time     5.75s	Block    995	 Tx    164
+Time     5.77s	Block    995	Tx    164	 
+From Orderer Time     5.92s	Block    996	 Tx    167
+From Orderer Time     5.93s	Block    997	 Tx    165
+From Orderer Time     5.94s	Block    998	 Tx    165
+From Orderer Time     5.96s	Block    999	 Tx    168
+Time     5.97s	Block    996	Tx    167	 
+Time     5.98s	Block    997	Tx    165	 
+Time     6.00s	Block    998	Tx    165	 
+From Orderer Time     6.01s	Block   1000	 Tx    165
+Time     6.03s	Block    999	Tx    168	 
+From Orderer Time     6.03s	Block   1001	 Tx     77
+Time     6.05s	Block   1000	Tx    165	 
+Time     6.07s	Block   1001	Tx     77	 
+From Orderer Time     6.08s	Block   1002	 Tx    134
+Time     6.10s	Block   1002	Tx    134	 
+From Orderer Time     6.13s	Block   1003	 Tx    131
+Time     6.16s	Block   1003	Tx    131	 
+From Orderer Time     6.17s	Block   1004	 Tx    131
+Time     6.19s	Block   1004	Tx    131	 
+From Orderer Time     6.23s	Block   1005	 Tx    131
+Time     6.25s	Block   1005	Tx    131	 
+From Orderer Time     6.27s	Block   1006	 Tx    131
+Time     6.30s	Block   1006	Tx    131	 
+From Orderer Time     6.32s	Block   1007	 Tx    131
+Time     6.36s	Block   1007	Tx    131	 
+From Orderer Time     6.37s	Block   1008	 Tx    131
+Time     6.40s	Block   1008	Tx    131	 
+From Orderer Time     6.42s	Block   1009	 Tx    131
+Time     6.44s	Block   1009	Tx    131	 
+From Orderer Time     6.46s	Block   1010	 Tx    131
+Time     6.49s	Block   1010	Tx    131	 
+From Orderer Time     6.51s	Block   1011	 Tx    131
+Time     6.53s	Block   1011	Tx    131	 
+From Orderer Time     6.55s	Block   1012	 Tx    131
+Time     6.58s	Block   1012	Tx    131	 
+From Orderer Time     6.59s	Block   1013	 Tx    131
+Time     6.61s	Block   1013	Tx    131	 
+From Orderer Time     6.64s	Block   1014	 Tx    131
+Time     6.68s	Block   1014	Tx    131	 
+From Orderer Time     6.69s	Block   1015	 Tx    131
+Time     6.71s	Block   1015	Tx    131	 
+From Orderer Time     6.73s	Block   1016	 Tx    131
+Time     6.77s	Block   1016	Tx    131	 
+From Orderer Time     6.78s	Block   1017	 Tx    131
+Time     6.80s	Block   1017	Tx    131	 
+From Orderer Time     6.80s	Block   1018	 Tx    131
+Time     6.83s	Block   1018	Tx    131	 
+From Orderer Time     6.85s	Block   1019	 Tx    131
+Time     6.87s	Block   1019	Tx    131	 
+From Orderer Time     6.89s	Block   1020	 Tx    131
+Time     6.92s	Block   1020	Tx    131	 
+From Orderer Time     6.93s	Block   1021	 Tx    131
+Time     6.96s	Block   1021	Tx    131	 
+From Orderer Time     6.97s	Block   1022	 Tx    131
+Time     7.00s	Block   1022	Tx    131	 
+From Orderer Time     7.03s	Block   1023	 Tx    131
+From Orderer Time     7.03s	Block   1024	 Tx     12
+Time     7.06s	Block   1023	Tx    131	 
+Time     7.06s	Block   1024	Tx     12	 
+From Orderer Time     7.08s	Block   1025	 Tx    131
+Time     7.10s	Block   1025	Tx    131	 
+From Orderer Time     7.13s	Block   1026	 Tx    131
+Time     7.16s	Block   1026	Tx    131	 
+From Orderer Time     7.18s	Block   1027	 Tx    131
+Time     7.20s	Block   1027	Tx    131	 
+From Orderer Time     7.22s	Block   1028	 Tx    131
+Time     7.25s	Block   1028	Tx    131	 
+From Orderer Time     7.26s	Block   1029	 Tx    131
+Time     7.29s	Block   1029	Tx    131	 
+From Orderer Time     7.30s	Block   1030	 Tx    131
+Time     7.33s	Block   1030	Tx    131	 
+From Orderer Time     7.35s	Block   1031	 Tx    131
+Time     7.38s	Block   1031	Tx    131	 
+From Orderer Time     7.39s	Block   1032	 Tx    131
+Time     7.42s	Block   1032	Tx    131	 
+From Orderer Time     7.43s	Block   1033	 Tx    131
+Time     7.46s	Block   1033	Tx    131	 
+From Orderer Time     7.48s	Block   1034	 Tx    131
+Time     7.51s	Block   1034	Tx    131	 
+From Orderer Time     7.52s	Block   1035	 Tx    131
+Time     7.55s	Block   1035	Tx    131	 
+From Orderer Time     7.57s	Block   1036	 Tx    131
+Time     7.60s	Block   1036	Tx    131	 
+From Orderer Time     7.62s	Block   1037	 Tx    131
+Time     7.64s	Block   1037	Tx    131	 
+From Orderer Time     7.66s	Block   1038	 Tx    131
+Time     7.69s	Block   1038	Tx    131	 
+From Orderer Time     7.71s	Block   1039	 Tx    131
+Time     7.73s	Block   1039	Tx    131	 
+From Orderer Time     7.76s	Block   1040	 Tx    131
+Time     7.79s	Block   1040	Tx    131	 
+From Orderer Time     7.80s	Block   1041	 Tx    131
+Time     7.83s	Block   1041	Tx    131	 
+From Orderer Time     7.84s	Block   1042	 Tx    131
+Time     7.87s	Block   1042	Tx    131	 
+From Orderer Time     7.90s	Block   1043	 Tx    131
+Time     7.92s	Block   1043	Tx    131	 
+From Orderer Time     7.96s	Block   1044	 Tx    131
+Time     7.98s	Block   1044	Tx    131	 
+From Orderer Time     8.00s	Block   1045	 Tx    131
+Time     8.02s	Block   1045	Tx    131	 
+From Orderer Time     8.03s	Block   1046	 Tx     94
+Time     8.06s	Block   1046	Tx     94	 
+From Orderer Time     8.12s	Block   1047	 Tx    131
+From Orderer Time     8.14s	Block   1048	 Tx    131
+From Orderer Time     8.16s	Block   1049	 Tx    131
+Time     8.17s	Block   1047	Tx    131	 
+Time     8.20s	Block   1048	Tx    131	 
+From Orderer Time     8.20s	Block   1050	 Tx    131
+Time     8.22s	Block   1049	Tx    131	 
+Time     8.24s	Block   1050	Tx    131	 
+From Orderer Time     8.26s	Block   1051	 Tx    131
+Time     8.28s	Block   1051	Tx    131	 
+From Orderer Time     8.30s	Block   1052	 Tx    131
+Time     8.31s	Block   1052	Tx    131	 
+From Orderer Time     8.34s	Block   1053	 Tx    131
+Time     8.37s	Block   1053	Tx    131	 
+From Orderer Time     8.38s	Block   1054	 Tx    131
+Time     8.41s	Block   1054	Tx    131	 
+From Orderer Time     8.42s	Block   1055	 Tx    131
+Time     8.45s	Block   1055	Tx    131	 
+From Orderer Time     8.47s	Block   1056	 Tx    131
+Time     8.49s	Block   1056	Tx    131	 
+From Orderer Time     8.51s	Block   1057	 Tx    131
+Time     8.54s	Block   1057	Tx    131	 
+From Orderer Time     8.56s	Block   1058	 Tx    131
+Time     8.60s	Block   1058	Tx    131	 
+From Orderer Time     8.60s	Block   1059	 Tx    131
+Time     8.63s	Block   1059	Tx    131	 
+From Orderer Time     8.64s	Block   1060	 Tx    131
+Time     8.65s	Block   1060	Tx    131	 
+From Orderer Time     8.67s	Block   1061	 Tx    131
+Time     8.70s	Block   1061	Tx    131	 
+From Orderer Time     8.72s	Block   1062	 Tx    131
+Time     8.74s	Block   1062	Tx    131	 
+From Orderer Time     8.76s	Block   1063	 Tx    131
+Time     8.78s	Block   1063	Tx    131	 
+From Orderer Time     8.79s	Block   1064	 Tx    131
+Time     8.81s	Block   1064	Tx    131	 
+From Orderer Time     8.83s	Block   1065	 Tx    131
+Time     8.85s	Block   1065	Tx    131	 
+From Orderer Time     8.86s	Block   1066	 Tx    131
+Time     8.89s	Block   1066	Tx    131	 
+From Orderer Time     8.90s	Block   1067	 Tx    131
+Time     8.92s	Block   1067	Tx    131	 
+From Orderer Time     8.94s	Block   1068	 Tx    131
+Time     8.97s	Block   1068	Tx    131	 
+From Orderer Time     8.98s	Block   1069	 Tx    131
+Time     9.00s	Block   1069	Tx    131	 
+From Orderer Time     9.02s	Block   1070	 Tx    131
+From Orderer Time     9.03s	Block   1071	 Tx     39
+Time     9.04s	Block   1070	Tx    131	 
+Time     9.05s	Block   1071	Tx     39	 
+From Orderer Time     9.07s	Block   1072	 Tx    131
+Time     9.10s	Block   1072	Tx    131	 
+From Orderer Time     9.11s	Block   1073	 Tx    131
+Time     9.14s	Block   1073	Tx    131	 
+From Orderer Time     9.15s	Block   1074	 Tx    131
+Time     9.17s	Block   1074	Tx    131	 
+From Orderer Time     9.20s	Block   1075	 Tx    131
+Time     9.22s	Block   1075	Tx    131	 
+From Orderer Time     9.23s	Block   1076	 Tx    131
+Time     9.26s	Block   1076	Tx    131	 
+From Orderer Time     9.27s	Block   1077	 Tx    131
+Time     9.30s	Block   1077	Tx    131	 
+From Orderer Time     9.31s	Block   1078	 Tx    131
+Time     9.33s	Block   1078	Tx    131	 
+From Orderer Time     9.35s	Block   1079	 Tx    131
+Time     9.37s	Block   1079	Tx    131	 
+From Orderer Time     9.39s	Block   1080	 Tx    131
+Time     9.41s	Block   1080	Tx    131	 
+From Orderer Time     9.42s	Block   1081	 Tx    131
+Time     9.45s	Block   1081	Tx    131	 
+From Orderer Time     9.46s	Block   1082	 Tx    131
+Time     9.48s	Block   1082	Tx    131	 
+From Orderer Time     9.51s	Block   1083	 Tx    131
+Time     9.53s	Block   1083	Tx    131	 
+From Orderer Time     9.54s	Block   1084	 Tx    131
+Time     9.56s	Block   1084	Tx    131	 
+From Orderer Time     9.58s	Block   1085	 Tx    131
+Time     9.60s	Block   1085	Tx    131	 
+From Orderer Time     9.62s	Block   1086	 Tx    131
+Time     9.64s	Block   1086	Tx    131	 
+From Orderer Time     9.66s	Block   1087	 Tx    131
+Time     9.68s	Block   1087	Tx    131	 
+From Orderer Time     9.70s	Block   1088	 Tx    131
+Time     9.72s	Block   1088	Tx    131	 
+From Orderer Time     9.73s	Block   1089	 Tx    131
+Time     9.76s	Block   1089	Tx    131	 
+From Orderer Time     9.77s	Block   1090	 Tx    131
+Time     9.79s	Block   1090	Tx    131	 
+From Orderer Time     9.80s	Block   1091	 Tx    131
+Time     9.83s	Block   1091	Tx    131	 
+From Orderer Time     9.84s	Block   1092	 Tx    131
+Time     9.87s	Block   1092	Tx    131	 
+From Orderer Time     9.89s	Block   1093	 Tx    131
+Time     9.91s	Block   1093	Tx    131	 
+From Orderer Time     9.92s	Block   1094	 Tx    131
+Time     9.95s	Block   1094	Tx    131	 
+From Orderer Time     9.96s	Block   1095	 Tx    131
+Time     9.98s	Block   1095	Tx    131	 
+From Orderer Time    10.00s	Block   1096	 Tx    131
+Time    10.02s	Block   1096	Tx    131	 
+From Orderer Time    10.03s	Block   1097	 Tx    106
+Time    10.05s	Block   1097	Tx    106	 
+From Orderer Time    10.07s	Block   1098	 Tx    131
+Time    10.09s	Block   1098	Tx    131	 
+From Orderer Time    10.11s	Block   1099	 Tx    131
+Time    10.14s	Block   1099	Tx    131	 
+From Orderer Time    10.14s	Block   1100	 Tx    131
+Time    10.16s	Block   1100	Tx    131	 
+From Orderer Time    10.18s	Block   1101	 Tx    131
+Time    10.21s	Block   1101	Tx    131	 
+From Orderer Time    10.22s	Block   1102	 Tx    131
+Time    10.24s	Block   1102	Tx    131	 
+From Orderer Time    10.26s	Block   1103	 Tx    131
+Time    10.28s	Block   1103	Tx    131	 
+From Orderer Time    10.30s	Block   1104	 Tx    131
+Time    10.32s	Block   1104	Tx    131	 
+From Orderer Time    10.34s	Block   1105	 Tx    131
+Time    10.36s	Block   1105	Tx    131	 
+From Orderer Time    10.37s	Block   1106	 Tx    131
+Time    10.39s	Block   1106	Tx    131	 
+From Orderer Time    10.42s	Block   1107	 Tx    131
+Time    10.44s	Block   1107	Tx    131	 
+From Orderer Time    10.45s	Block   1108	 Tx    131
+Time    10.47s	Block   1108	Tx    131	 
+From Orderer Time    10.49s	Block   1109	 Tx    131
+Time    10.52s	Block   1109	Tx    131	 
+From Orderer Time    10.53s	Block   1110	 Tx    131
+Time    10.55s	Block   1110	Tx    131	 
+From Orderer Time    10.57s	Block   1111	 Tx    131
+Time    10.59s	Block   1111	Tx    131	 
+From Orderer Time    10.62s	Block   1112	 Tx    131
+Time    10.63s	Block   1112	Tx    131	 
+From Orderer Time    10.65s	Block   1113	 Tx    131
+Time    10.67s	Block   1113	Tx    131	 
+From Orderer Time    10.69s	Block   1114	 Tx    131
+Time    10.72s	Block   1114	Tx    131	 
+From Orderer Time    10.73s	Block   1115	 Tx    131
+Time    10.75s	Block   1115	Tx    131	 
+From Orderer Time    10.77s	Block   1116	 Tx    131
+Time    10.80s	Block   1116	Tx    131	 
+From Orderer Time    10.81s	Block   1117	 Tx    131
+Time    10.83s	Block   1117	Tx    131	 
+From Orderer Time    10.85s	Block   1118	 Tx    131
+Time    10.88s	Block   1118	Tx    131	 
+From Orderer Time    10.90s	Block   1119	 Tx    131
+Time    10.92s	Block   1119	Tx    131	 
+From Orderer Time    10.94s	Block   1120	 Tx    131
+Time    10.97s	Block   1120	Tx    131	 
+From Orderer Time    10.98s	Block   1121	 Tx    131
+Time    11.00s	Block   1121	Tx    131	 
+From Orderer Time    11.01s	Block   1122	 Tx    131
+From Orderer Time    11.03s	Block   1123	 Tx     75
+Time    11.04s	Block   1122	Tx    131	 
+Time    11.05s	Block   1123	Tx     75	 
+From Orderer Time    11.07s	Block   1124	 Tx    131
+Time    11.10s	Block   1124	Tx    131	 
+From Orderer Time    11.11s	Block   1125	 Tx    131
+Time    11.12s	Block   1125	Tx    131	 
+From Orderer Time    11.14s	Block   1126	 Tx    131
+Time    11.16s	Block   1126	Tx    131	 
+From Orderer Time    11.18s	Block   1127	 Tx    131
+Time    11.20s	Block   1127	Tx    131	 
+From Orderer Time    11.22s	Block   1128	 Tx    131
+Time    11.24s	Block   1128	Tx    131	 
+From Orderer Time    11.25s	Block   1129	 Tx    131
+Time    11.27s	Block   1129	Tx    131	 
+From Orderer Time    11.29s	Block   1130	 Tx    131
+Time    11.31s	Block   1130	Tx    131	 
+From Orderer Time    11.33s	Block   1131	 Tx    131
+Time    11.35s	Block   1131	Tx    131	 
+From Orderer Time    11.37s	Block   1132	 Tx    131
+Time    11.38s	Block   1132	Tx    131	 
+From Orderer Time    11.42s	Block   1133	 Tx    131
+From Orderer Time    11.45s	Block   1134	 Tx    131
+Time    11.45s	Block   1133	Tx    131	 
+Time    11.47s	Block   1134	Tx    131	 
+From Orderer Time    11.48s	Block   1135	 Tx    131
+Time    11.51s	Block   1135	Tx    131	 
+From Orderer Time    11.53s	Block   1136	 Tx    131
+Time    11.55s	Block   1136	Tx    131	 
+From Orderer Time    11.56s	Block   1137	 Tx    131
+Time    11.58s	Block   1137	Tx    131	 
+From Orderer Time    11.60s	Block   1138	 Tx    131
+Time    11.62s	Block   1138	Tx    131	 
+From Orderer Time    11.64s	Block   1139	 Tx    131
+Time    11.66s	Block   1139	Tx    131	 
+From Orderer Time    11.68s	Block   1140	 Tx    131
+Time    11.70s	Block   1140	Tx    131	 
+From Orderer Time    11.71s	Block   1141	 Tx    131
+Time    11.74s	Block   1141	Tx    131	 
+From Orderer Time    11.75s	Block   1142	 Tx    131
+Time    11.77s	Block   1142	Tx    131	 
+From Orderer Time    11.79s	Block   1143	 Tx    131
+Time    11.81s	Block   1143	Tx    131	 
+From Orderer Time    11.82s	Block   1144	 Tx    131
+Time    11.84s	Block   1144	Tx    131	 
+From Orderer Time    11.86s	Block   1145	 Tx    131
+Time    11.88s	Block   1145	Tx    131	 
+From Orderer Time    11.90s	Block   1146	 Tx    131
+Time    11.93s	Block   1146	Tx    131	 
+From Orderer Time    11.94s	Block   1147	 Tx    131
+Time    11.96s	Block   1147	Tx    131	 
+From Orderer Time    11.98s	Block   1148	 Tx    131
+Time    12.00s	Block   1148	Tx    131	 
+From Orderer Time    12.01s	Block   1149	 Tx    131
+Time    12.03s	Block   1149	Tx    131	 
+From Orderer Time    12.04s	Block   1150	 Tx     97
+Time    12.05s	Block   1150	Tx     97	 
+From Orderer Time    12.08s	Block   1151	 Tx    131
+Time    12.10s	Block   1151	Tx    131	 
+From Orderer Time    12.12s	Block   1152	 Tx    131
+Time    12.13s	Block   1152	Tx    131	 
+From Orderer Time    12.15s	Block   1153	 Tx    131
+Time    12.17s	Block   1153	Tx    131	 
+From Orderer Time    12.18s	Block   1154	 Tx    131
+Time    12.21s	Block   1154	Tx    131	 
+From Orderer Time    12.22s	Block   1155	 Tx    131
+Time    12.24s	Block   1155	Tx    131	 
+From Orderer Time    12.25s	Block   1156	 Tx    131
+Time    12.28s	Block   1156	Tx    131	 
+From Orderer Time    12.30s	Block   1157	 Tx    131
+Time    12.31s	Block   1157	Tx    131	 
+From Orderer Time    12.34s	Block   1158	 Tx    131
+Time    12.35s	Block   1158	Tx    131	 
+From Orderer Time    12.37s	Block   1159	 Tx    131
+Time    12.40s	Block   1159	Tx    131	 
+From Orderer Time    12.41s	Block   1160	 Tx    131
+Time    12.43s	Block   1160	Tx    131	 
+From Orderer Time    12.45s	Block   1161	 Tx    131
+Time    12.47s	Block   1161	Tx    131	 
+From Orderer Time    12.48s	Block   1162	 Tx    131
+Time    12.50s	Block   1162	Tx    131	 
+From Orderer Time    12.52s	Block   1163	 Tx    131
+Time    12.54s	Block   1163	Tx    131	 
+From Orderer Time    12.55s	Block   1164	 Tx    131
+Time    12.57s	Block   1164	Tx    131	 
+From Orderer Time    12.59s	Block   1165	 Tx    131
+Time    12.62s	Block   1165	Tx    131	 
+From Orderer Time    12.62s	Block   1166	 Tx    131
+Time    12.65s	Block   1166	Tx    131	 
+From Orderer Time    12.66s	Block   1167	 Tx    131
+Time    12.68s	Block   1167	Tx    131	 
+From Orderer Time    12.70s	Block   1168	 Tx    131
+Time    12.72s	Block   1168	Tx    131	 
+From Orderer Time    12.74s	Block   1169	 Tx    131
+Time    12.76s	Block   1169	Tx    131	 
+From Orderer Time    12.77s	Block   1170	 Tx    131
+Time    12.80s	Block   1170	Tx    131	 
+From Orderer Time    12.81s	Block   1171	 Tx    131
+Time    12.83s	Block   1171	Tx    131	 
+From Orderer Time    12.85s	Block   1172	 Tx    131
+Time    12.87s	Block   1172	Tx    131	 
+From Orderer Time    12.89s	Block   1173	 Tx    131
+Time    12.92s	Block   1173	Tx    131	 
+From Orderer Time    12.94s	Block   1174	 Tx    131
+Time    12.95s	Block   1174	Tx    131	 
+From Orderer Time    12.97s	Block   1175	 Tx    131
+Time    12.99s	Block   1175	Tx    131	 
+From Orderer Time    13.01s	Block   1176	 Tx    131
+Time    13.03s	Block   1176	Tx    131	 
+From Orderer Time    13.03s	Block   1177	 Tx    108
+Time    13.05s	Block   1177	Tx    108	 
+From Orderer Time    13.07s	Block   1178	 Tx    131
+Time    13.09s	Block   1178	Tx    131	 
+From Orderer Time    13.10s	Block   1179	 Tx    131
+Time    13.13s	Block   1179	Tx    131	 
+From Orderer Time    13.15s	Block   1180	 Tx    131
+Time    13.16s	Block   1180	Tx    131	 
+From Orderer Time    13.18s	Block   1181	 Tx    131
+Time    13.20s	Block   1181	Tx    131	 
+From Orderer Time    13.22s	Block   1182	 Tx    131
+Time    13.24s	Block   1182	Tx    131	 
+From Orderer Time    13.26s	Block   1183	 Tx    131
+Time    13.27s	Block   1183	Tx    131	 
+From Orderer Time    13.30s	Block   1184	 Tx    131
+Time    13.34s	Block   1184	Tx    131	 
+From Orderer Time    13.34s	Block   1185	 Tx    131
+Time    13.36s	Block   1185	Tx    131	 
+From Orderer Time    14.03s	Block   1186	 Tx     49
+Time    14.04s	Block   1186	Tx     49	 
+tx: 40000, duration: 14.043076206s, tps: 2848.378761

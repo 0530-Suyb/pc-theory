@@ -1,0 +1,533 @@
+From Orderer Time     0.10s	Block      7	 Tx    147
+Time     0.14s	Block      7	Tx    147	 
+From Orderer Time     0.15s	Block      8	 Tx    142
+Time     0.18s	Block      8	Tx    142	 
+Time     0.20s	Block      9	Tx    134	 
+From Orderer Time     0.21s	Block      9	 Tx    134
+From Orderer Time     0.27s	Block     10	 Tx    143
+Time     0.28s	Block     10	Tx    143	 
+Time     0.29s	Block     11	Tx    151	 
+From Orderer Time     0.30s	Block     11	 Tx    151
+Time     0.32s	Block     12	Tx    140	 
+From Orderer Time     0.34s	Block     12	 Tx    140
+Time     0.38s	Block     13	Tx    139	 
+From Orderer Time     0.39s	Block     13	 Tx    139
+Time     0.43s	Block     14	Tx    156	 
+From Orderer Time     0.44s	Block     14	 Tx    156
+From Orderer Time     0.45s	Block     15	 Tx    150
+Time     0.50s	Block     15	Tx    150	 
+From Orderer Time     0.53s	Block     16	 Tx    151
+Time     0.53s	Block     16	Tx    151	 
+From Orderer Time     0.57s	Block     17	 Tx    139
+Time     0.58s	Block     17	Tx    139	 
+From Orderer Time     0.60s	Block     18	 Tx    135
+Time     0.63s	Block     18	Tx    135	 
+From Orderer Time     0.64s	Block     19	 Tx    133
+Time     0.64s	Block     19	Tx    133	 
+From Orderer Time     0.68s	Block     20	 Tx    153
+Time     0.68s	Block     20	Tx    153	 
+From Orderer Time     0.69s	Block     21	 Tx    150
+From Orderer Time     0.71s	Block     22	 Tx    140
+Time     0.75s	Block     21	Tx    150	 
+From Orderer Time     0.78s	Block     23	 Tx    152
+From Orderer Time     0.81s	Block     24	 Tx    137
+Time     0.76s	Block     22	Tx    140	 
+Time     0.90s	Block     23	Tx    152	 
+From Orderer Time     0.93s	Block     25	 Tx    160
+From Orderer Time     0.96s	Block     26	 Tx    161
+Time     0.93s	Block     24	Tx    137	 
+From Orderer Time     0.99s	Block     27	 Tx    151
+Time     1.00s	Block     25	Tx    160	 
+From Orderer Time     1.02s	Block     28	 Tx    130
+Time     1.02s	Block     26	Tx    161	 
+From Orderer Time     1.05s	Block     29	 Tx    131
+Time     1.06s	Block     27	Tx    151	 
+From Orderer Time     1.09s	Block     30	 Tx    141
+Time     1.10s	Block     28	Tx    130	 
+From Orderer Time     1.11s	Block     31	 Tx    144
+Time     1.14s	Block     29	Tx    131	 
+From Orderer Time     1.18s	Block     32	 Tx    156
+Time     1.16s	Block     30	Tx    141	 
+Time     1.20s	Block     31	Tx    144	 
+From Orderer Time     1.20s	Block     33	 Tx    153
+Time     1.23s	Block     32	Tx    156	 
+From Orderer Time     1.25s	Block     34	 Tx    154
+Time     1.26s	Block     33	Tx    153	 
+From Orderer Time     1.28s	Block     35	 Tx    131
+Time     1.30s	Block     34	Tx    154	 
+From Orderer Time     1.31s	Block     36	 Tx    149
+From Orderer Time     1.34s	Block     37	 Tx    153
+Time     1.32s	Block     35	Tx    131	 
+From Orderer Time     1.37s	Block     38	 Tx    142
+Time     1.36s	Block     36	Tx    149	 
+From Orderer Time     1.41s	Block     39	 Tx    151
+Time     1.40s	Block     37	Tx    153	 
+Time     1.43s	Block     38	Tx    142	 
+From Orderer Time     1.44s	Block     40	 Tx    160
+From Orderer Time     1.47s	Block     41	 Tx    161
+Time     1.45s	Block     39	Tx    151	 
+From Orderer Time     1.52s	Block     42	 Tx    149
+Time     1.54s	Block     40	Tx    160	 
+From Orderer Time     1.57s	Block     43	 Tx    162
+Time     1.55s	Block     41	Tx    161	 
+From Orderer Time     1.60s	Block     44	 Tx    154
+Time     1.60s	Block     42	Tx    149	 
+From Orderer Time     1.66s	Block     45	 Tx    142
+Time     1.66s	Block     43	Tx    162	 
+From Orderer Time     1.67s	Block     46	 Tx    144
+From Orderer Time     1.72s	Block     47	 Tx    151
+Time     1.71s	Block     44	Tx    154	 
+Time     1.75s	Block     45	Tx    142	 
+From Orderer Time     1.76s	Block     48	 Tx    131
+From Orderer Time     1.79s	Block     49	 Tx    136
+Time     1.76s	Block     46	Tx    144	 
+From Orderer Time     1.84s	Block     50	 Tx    141
+Time     1.82s	Block     47	Tx    151	 
+From Orderer Time     1.87s	Block     51	 Tx    138
+Time     1.90s	Block     48	Tx    131	 
+From Orderer Time     1.91s	Block     52	 Tx    153
+From Orderer Time     1.94s	Block     53	 Tx    145
+Time     1.92s	Block     49	Tx    136	 
+From Orderer Time     1.98s	Block     54	 Tx    147
+Time     1.98s	Block     50	Tx    141	 
+From Orderer Time     2.01s	Block     55	 Tx    144
+Time     2.02s	Block     51	Tx    138	 
+From Orderer Time     2.04s	Block     56	 Tx    144
+From Orderer Time     2.06s	Block     57	 Tx    151
+Time     2.04s	Block     52	Tx    153	 
+From Orderer Time     2.10s	Block     58	 Tx    139
+Time     2.09s	Block     53	Tx    145	 
+From Orderer Time     2.13s	Block     59	 Tx    165
+From Orderer Time     2.15s	Block     60	 Tx    152
+Time     2.14s	Block     54	Tx    147	 
+Time     2.20s	Block     55	Tx    144	 
+From Orderer Time     2.20s	Block     61	 Tx    159
+From Orderer Time     2.24s	Block     62	 Tx    152
+Time     2.22s	Block     56	Tx    144	 
+From Orderer Time     2.27s	Block     63	 Tx    158
+Time     2.27s	Block     57	Tx    151	 
+From Orderer Time     2.30s	Block     64	 Tx    161
+From Orderer Time     2.33s	Block     65	 Tx    159
+Time     2.32s	Block     58	Tx    139	 
+From Orderer Time     2.39s	Block     66	 Tx    141
+Time     2.38s	Block     59	Tx    165	 
+From Orderer Time     2.42s	Block     67	 Tx    140
+Time     2.42s	Block     60	Tx    152	 
+From Orderer Time     2.45s	Block     68	 Tx    137
+Time     2.44s	Block     61	Tx    159	 
+From Orderer Time     2.48s	Block     69	 Tx    153
+Time     2.48s	Block     62	Tx    152	 
+From Orderer Time     2.52s	Block     70	 Tx    151
+Time     2.52s	Block     63	Tx    158	 
+From Orderer Time     2.56s	Block     71	 Tx    150
+Time     2.55s	Block     64	Tx    161	 
+Time     2.59s	Block     65	Tx    159	 
+From Orderer Time     2.60s	Block     72	 Tx    160
+Time     2.62s	Block     66	Tx    141	 
+From Orderer Time     2.65s	Block     73	 Tx    159
+Time     2.65s	Block     67	Tx    140	 
+From Orderer Time     2.70s	Block     74	 Tx    157
+Time     2.71s	Block     68	Tx    137	 
+From Orderer Time     2.73s	Block     75	 Tx    149
+Time     2.77s	Block     69	Tx    153	 
+From Orderer Time     2.77s	Block     76	 Tx    143
+From Orderer Time     2.81s	Block     77	 Tx    149
+Time     2.78s	Block     70	Tx    151	 
+Time     2.85s	Block     71	Tx    150	 
+From Orderer Time     2.88s	Block     78	 Tx    156
+Time     2.89s	Block     72	Tx    160	 
+From Orderer Time     2.93s	Block     79	 Tx    158
+Time     2.93s	Block     73	Tx    159	 
+From Orderer Time     2.97s	Block     80	 Tx    153
+Time     2.98s	Block     74	Tx    157	 
+From Orderer Time     3.00s	Block     81	 Tx    147
+Time     3.01s	Block     75	Tx    149	 
+From Orderer Time     3.04s	Block     82	 Tx    147
+Time     3.03s	Block     76	Tx    143	 
+From Orderer Time     3.06s	Block     83	 Tx    154
+Time     3.07s	Block     77	Tx    149	 
+From Orderer Time     3.12s	Block     84	 Tx     72
+Time     3.12s	Block     78	Tx    156	 
+From Orderer Time     3.13s	Block     85	 Tx    162
+From Orderer Time     3.16s	Block     86	 Tx    155
+Time     3.15s	Block     79	Tx    158	 
+From Orderer Time     3.17s	Block     87	 Tx    144
+From Orderer Time     3.20s	Block     88	 Tx    140
+Time     3.18s	Block     80	Tx    153	 
+From Orderer Time     3.26s	Block     89	 Tx    148
+Time     3.25s	Block     81	Tx    147	 
+From Orderer Time     3.29s	Block     90	 Tx    160
+Time     3.29s	Block     82	Tx    147	 
+From Orderer Time     3.32s	Block     91	 Tx    155
+Time     3.32s	Block     83	Tx    154	 
+From Orderer Time     3.34s	Block     92	 Tx    132
+Time     3.36s	Block     84	Tx     72	 
+Time     3.38s	Block     85	Tx    162	 
+From Orderer Time     3.38s	Block     93	 Tx    131
+From Orderer Time     3.41s	Block     94	 Tx    151
+Time     3.40s	Block     86	Tx    155	 
+From Orderer Time     3.46s	Block     95	 Tx    150
+From Orderer Time     3.51s	Block     96	 Tx    142
+Time     3.49s	Block     87	Tx    144	 
+From Orderer Time     3.55s	Block     97	 Tx    149
+Time     3.55s	Block     88	Tx    140	 
+From Orderer Time     3.57s	Block     98	 Tx    147
+Time     3.56s	Block     89	Tx    148	 
+From Orderer Time     3.63s	Block     99	 Tx    147
+Time     3.63s	Block     90	Tx    160	 
+From Orderer Time     3.68s	Block    100	 Tx    158
+Time     3.68s	Block     91	Tx    155	 
+From Orderer Time     3.70s	Block    101	 Tx    162
+Time     3.70s	Block     92	Tx    132	 
+From Orderer Time     3.74s	Block    102	 Tx    151
+Time     3.74s	Block     93	Tx    131	 
+Time     3.76s	Block     94	Tx    151	 
+From Orderer Time     3.77s	Block    103	 Tx    143
+From Orderer Time     3.81s	Block    104	 Tx    154
+Time     3.81s	Block     95	Tx    150	 
+From Orderer Time     3.83s	Block    105	 Tx    154
+Time     3.82s	Block     96	Tx    142	 
+From Orderer Time     3.89s	Block    106	 Tx    148
+Time     3.91s	Block     97	Tx    149	 
+From Orderer Time     3.93s	Block    107	 Tx    151
+Time     3.93s	Block     98	Tx    147	 
+From Orderer Time     3.97s	Block    108	 Tx    138
+Time     3.98s	Block     99	Tx    147	 
+From Orderer Time     4.00s	Block    109	 Tx    136
+Time     4.03s	Block    100	Tx    158	 
+From Orderer Time     4.04s	Block    110	 Tx    131
+From Orderer Time     4.04s	Block    111	 Tx    132
+Time     4.04s	Block    101	Tx    162	 
+From Orderer Time     4.07s	Block    112	 Tx    153
+From Orderer Time     4.11s	Block    113	 Tx     65
+Time     4.09s	Block    102	Tx    151	 
+From Orderer Time     4.12s	Block    114	 Tx    157
+Time     4.13s	Block    103	Tx    143	 
+From Orderer Time     4.14s	Block    115	 Tx    154
+From Orderer Time     4.18s	Block    116	 Tx    155
+Time     4.16s	Block    104	Tx    154	 
+Time     4.21s	Block    105	Tx    154	 
+From Orderer Time     4.22s	Block    117	 Tx    156
+From Orderer Time     4.25s	Block    118	 Tx    155
+Time     4.24s	Block    106	Tx    148	 
+From Orderer Time     4.31s	Block    119	 Tx    150
+Time     4.31s	Block    107	Tx    151	 
+From Orderer Time     4.36s	Block    120	 Tx    151
+Time     4.34s	Block    108	Tx    138	 
+From Orderer Time     4.39s	Block    121	 Tx    149
+Time     4.39s	Block    109	Tx    136	 
+From Orderer Time     4.43s	Block    122	 Tx    153
+From Orderer Time     4.44s	Block    123	 Tx    157
+Time     4.44s	Block    110	Tx    131	 
+From Orderer Time     4.47s	Block    124	 Tx    147
+Time     4.45s	Block    111	Tx    132	 
+From Orderer Time     4.52s	Block    125	 Tx    148
+Time     4.52s	Block    112	Tx    153	 
+From Orderer Time     4.55s	Block    126	 Tx    142
+Time     4.55s	Block    113	Tx     65	 
+From Orderer Time     4.58s	Block    127	 Tx    144
+Time     4.58s	Block    114	Tx    157	 
+Time     4.60s	Block    115	Tx    154	 
+From Orderer Time     4.62s	Block    128	 Tx    150
+From Orderer Time     4.65s	Block    129	 Tx    159
+Time     4.64s	Block    116	Tx    155	 
+From Orderer Time     4.69s	Block    130	 Tx    159
+Time     4.71s	Block    117	Tx    156	 
+From Orderer Time     4.73s	Block    131	 Tx    158
+Time     4.76s	Block    118	Tx    155	 
+From Orderer Time     4.76s	Block    132	 Tx    149
+Time     4.79s	Block    119	Tx    150	 
+From Orderer Time     4.80s	Block    133	 Tx    154
+Time     4.82s	Block    120	Tx    151	 
+From Orderer Time     4.83s	Block    134	 Tx    166
+Time     4.85s	Block    121	Tx    149	 
+From Orderer Time     4.88s	Block    135	 Tx    155
+Time     4.90s	Block    122	Tx    153	 
+From Orderer Time     4.91s	Block    136	 Tx    148
+Time     4.93s	Block    123	Tx    157	 
+From Orderer Time     4.95s	Block    137	 Tx    146
+Time     4.96s	Block    124	Tx    147	 
+From Orderer Time     4.99s	Block    138	 Tx    147
+Time     4.98s	Block    125	Tx    148	 
+Time     5.01s	Block    126	Tx    142	 
+From Orderer Time     5.03s	Block    139	 Tx    140
+Time     5.07s	Block    127	Tx    144	 
+From Orderer Time     5.10s	Block    140	 Tx     55
+From Orderer Time     5.13s	Block    141	 Tx    148
+Time     5.13s	Block    128	Tx    150	 
+From Orderer Time     5.16s	Block    142	 Tx    148
+Time     5.18s	Block    129	Tx    159	 
+From Orderer Time     5.20s	Block    143	 Tx    144
+From Orderer Time     5.22s	Block    144	 Tx    139
+Time     5.20s	Block    130	Tx    159	 
+From Orderer Time     5.23s	Block    145	 Tx    137
+Time     5.24s	Block    131	Tx    158	 
+From Orderer Time     5.26s	Block    146	 Tx    134
+Time     5.25s	Block    132	Tx    149	 
+From Orderer Time     5.31s	Block    147	 Tx    142
+Time     5.31s	Block    133	Tx    154	 
+From Orderer Time     5.33s	Block    148	 Tx    147
+Time     5.33s	Block    134	Tx    166	 
+From Orderer Time     5.37s	Block    149	 Tx    152
+Time     5.35s	Block    135	Tx    155	 
+From Orderer Time     5.40s	Block    150	 Tx    155
+Time     5.40s	Block    136	Tx    148	 
+Time     5.43s	Block    137	Tx    146	 
+From Orderer Time     5.45s	Block    151	 Tx    164
+Time     5.46s	Block    138	Tx    147	 
+Time     5.47s	Block    139	Tx    140	 
+From Orderer Time     5.48s	Block    152	 Tx    151
+Time     5.51s	Block    140	Tx     55	 
+From Orderer Time     5.53s	Block    153	 Tx    149
+Time     5.55s	Block    141	Tx    148	 
+From Orderer Time     5.58s	Block    154	 Tx    162
+Time     5.57s	Block    142	Tx    148	 
+From Orderer Time     5.63s	Block    155	 Tx    155
+Time     5.61s	Block    143	Tx    144	 
+Time     5.65s	Block    144	Tx    139	 
+From Orderer Time     5.66s	Block    156	 Tx    153
+Time     5.68s	Block    145	Tx    137	 
+From Orderer Time     5.69s	Block    157	 Tx    160
+Time     5.73s	Block    146	Tx    134	 
+From Orderer Time     5.74s	Block    158	 Tx    155
+Time     5.77s	Block    147	Tx    142	 
+From Orderer Time     5.78s	Block    159	 Tx    148
+Time     5.80s	Block    148	Tx    147	 
+From Orderer Time     5.82s	Block    160	 Tx    150
+Time     5.85s	Block    149	Tx    152	 
+From Orderer Time     5.87s	Block    161	 Tx    149
+Time     5.87s	Block    150	Tx    155	 
+From Orderer Time     5.90s	Block    162	 Tx    156
+Time     5.88s	Block    151	Tx    164	 
+From Orderer Time     5.92s	Block    163	 Tx    157
+Time     5.92s	Block    152	Tx    151	 
+From Orderer Time     5.98s	Block    164	 Tx    143
+Time     5.97s	Block    153	Tx    149	 
+From Orderer Time     6.00s	Block    165	 Tx    143
+From Orderer Time     6.03s	Block    166	 Tx    150
+Time     6.00s	Block    154	Tx    162	 
+From Orderer Time     6.07s	Block    167	 Tx     97
+Time     6.05s	Block    155	Tx    155	 
+Time     6.08s	Block    156	Tx    153	 
+From Orderer Time     6.10s	Block    168	 Tx    151
+Time     6.12s	Block    157	Tx    160	 
+From Orderer Time     6.18s	Block    169	 Tx    142
+Time     6.19s	Block    158	Tx    155	 
+From Orderer Time     6.23s	Block    170	 Tx    154
+Time     6.23s	Block    159	Tx    148	 
+Time     6.26s	Block    160	Tx    150	 
+From Orderer Time     6.27s	Block    171	 Tx    142
+Time     6.28s	Block    161	Tx    149	 
+From Orderer Time     6.30s	Block    172	 Tx    133
+Time     6.30s	Block    162	Tx    156	 
+From Orderer Time     6.32s	Block    173	 Tx    150
+Time     6.32s	Block    163	Tx    157	 
+From Orderer Time     6.35s	Block    174	 Tx    140
+Time     6.37s	Block    164	Tx    143	 
+Time     6.39s	Block    165	Tx    143	 
+From Orderer Time     6.41s	Block    175	 Tx    150
+Time     6.42s	Block    166	Tx    150	 
+From Orderer Time     6.45s	Block    176	 Tx    149
+From Orderer Time     6.47s	Block    177	 Tx    143
+Time     6.45s	Block    167	Tx     97	 
+From Orderer Time     6.50s	Block    178	 Tx    143
+Time     6.50s	Block    168	Tx    151	 
+From Orderer Time     6.53s	Block    179	 Tx    146
+Time     6.53s	Block    169	Tx    142	 
+From Orderer Time     6.57s	Block    180	 Tx    150
+Time     6.57s	Block    170	Tx    154	 
+From Orderer Time     6.61s	Block    181	 Tx    156
+Time     6.62s	Block    171	Tx    142	 
+From Orderer Time     6.64s	Block    182	 Tx    157
+Time     6.64s	Block    172	Tx    133	 
+Time     6.67s	Block    173	Tx    150	 
+From Orderer Time     6.68s	Block    183	 Tx    161
+Time     6.70s	Block    174	Tx    140	 
+From Orderer Time     6.72s	Block    184	 Tx    151
+Time     6.74s	Block    175	Tx    150	 
+From Orderer Time     6.76s	Block    185	 Tx    151
+Time     6.76s	Block    176	Tx    149	 
+From Orderer Time     6.77s	Block    186	 Tx    147
+Time     6.77s	Block    177	Tx    143	 
+Time     6.78s	Block    178	Tx    143	 
+Time     6.79s	Block    179	Tx    146	 
+From Orderer Time     6.82s	Block    187	 Tx    137
+Time     6.80s	Block    180	Tx    150	 
+From Orderer Time     6.85s	Block    188	 Tx    142
+Time     6.84s	Block    181	Tx    156	 
+From Orderer Time     6.87s	Block    189	 Tx    148
+Time     6.88s	Block    182	Tx    157	 
+From Orderer Time     6.92s	Block    190	 Tx    148
+Time     6.94s	Block    183	Tx    161	 
+From Orderer Time     6.96s	Block    191	 Tx    152
+From Orderer Time     7.02s	Block    192	 Tx    159
+Time     6.99s	Block    184	Tx    151	 
+From Orderer Time     7.05s	Block    193	 Tx    157
+From Orderer Time     7.10s	Block    194	 Tx    157
+Time     7.10s	Block    185	Tx    151	 
+From Orderer Time     7.11s	Block    195	 Tx     27
+From Orderer Time     7.12s	Block    196	 Tx    160
+Time     7.12s	Block    186	Tx    147	 
+From Orderer Time     7.15s	Block    197	 Tx    156
+Time     7.16s	Block    187	Tx    137	 
+From Orderer Time     7.17s	Block    198	 Tx    148
+Time     7.17s	Block    188	Tx    142	 
+Time     7.21s	Block    189	Tx    148	 
+From Orderer Time     7.23s	Block    199	 Tx    155
+Time     7.23s	Block    190	Tx    148	 
+From Orderer Time     7.27s	Block    200	 Tx    145
+Time     7.27s	Block    191	Tx    152	 
+From Orderer Time     7.29s	Block    201	 Tx    146
+From Orderer Time     7.33s	Block    202	 Tx    166
+Time     7.32s	Block    192	Tx    159	 
+Time     7.35s	Block    193	Tx    157	 
+From Orderer Time     7.38s	Block    203	 Tx    164
+From Orderer Time     7.40s	Block    204	 Tx    160
+Time     7.40s	Block    194	Tx    157	 
+From Orderer Time     7.43s	Block    205	 Tx    147
+Time     7.42s	Block    195	Tx     27	 
+From Orderer Time     7.45s	Block    206	 Tx    145
+Time     7.46s	Block    196	Tx    160	 
+From Orderer Time     7.48s	Block    207	 Tx    149
+From Orderer Time     7.50s	Block    208	 Tx    151
+Time     7.49s	Block    197	Tx    156	 
+From Orderer Time     7.53s	Block    209	 Tx    149
+Time     7.53s	Block    198	Tx    148	 
+From Orderer Time     7.57s	Block    210	 Tx    145
+Time     7.58s	Block    199	Tx    155	 
+From Orderer Time     7.61s	Block    211	 Tx    147
+Time     7.61s	Block    200	Tx    145	 
+From Orderer Time     7.66s	Block    212	 Tx    144
+Time     7.64s	Block    201	Tx    146	 
+Time     7.70s	Block    202	Tx    166	 
+Time     7.74s	Block    203	Tx    164	 
+Time     7.77s	Block    204	Tx    160	 
+Time     7.78s	Block    205	Tx    147	 
+Time     7.81s	Block    206	Tx    145	 
+Time     7.82s	Block    207	Tx    149	 
+Time     7.83s	Block    208	Tx    151	 
+Time     7.93s	Block    209	Tx    149	 
+Time     7.97s	Block    210	Tx    145	 
+Time     7.99s	Block    211	Tx    147	 
+Time     8.06s	Block    212	Tx    144	 
+From Orderer Time     8.16s	Block    213	 Tx    150
+From Orderer Time     8.59s	Block    214	 Tx    149
+From Orderer Time     8.61s	Block    215	 Tx    159
+Time     8.61s	Block    213	Tx    150	 
+From Orderer Time     8.61s	Block    216	 Tx    116
+From Orderer Time     8.63s	Block    217	 Tx    159
+Time     8.65s	Block    214	Tx    149	 
+From Orderer Time     8.67s	Block    218	 Tx    162
+Time     8.70s	Block    215	Tx    159	 
+From Orderer Time     8.70s	Block    219	 Tx    156
+Time     8.72s	Block    216	Tx    116	 
+From Orderer Time     8.75s	Block    220	 Tx    149
+Time     8.76s	Block    217	Tx    159	 
+From Orderer Time     8.79s	Block    221	 Tx    157
+Time     8.79s	Block    218	Tx    162	 
+Time     8.82s	Block    219	Tx    156	 
+From Orderer Time     8.84s	Block    222	 Tx    153
+Time     8.85s	Block    220	Tx    149	 
+From Orderer Time     8.87s	Block    223	 Tx    151
+Time     8.88s	Block    221	Tx    157	 
+Time     8.91s	Block    222	Tx    153	 
+From Orderer Time     8.91s	Block    224	 Tx    152
+From Orderer Time     8.96s	Block    225	 Tx    159
+Time     8.97s	Block    223	Tx    151	 
+Time     8.98s	Block    224	Tx    152	 
+From Orderer Time     9.01s	Block    226	 Tx    168
+Time     9.04s	Block    225	Tx    159	 
+Time     9.05s	Block    226	Tx    168	 
+From Orderer Time     9.05s	Block    227	 Tx    168
+Time     9.08s	Block    227	Tx    168	 
+From Orderer Time     9.09s	Block    228	 Tx    168
+Time     9.12s	Block    228	Tx    168	 
+From Orderer Time     9.12s	Block    229	 Tx    168
+Time     9.16s	Block    229	Tx    168	 
+From Orderer Time     9.16s	Block    230	 Tx    168
+From Orderer Time     9.20s	Block    231	 Tx    168
+From Orderer Time     9.22s	Block    232	 Tx    168
+Time     9.22s	Block    230	Tx    168	 
+From Orderer Time     9.25s	Block    233	 Tx    168
+Time     9.26s	Block    231	Tx    168	 
+Time     9.29s	Block    232	Tx    168	 
+From Orderer Time     9.30s	Block    234	 Tx    168
+Time     9.34s	Block    233	Tx    168	 
+From Orderer Time     9.34s	Block    235	 Tx    168
+From Orderer Time     9.38s	Block    236	 Tx    168
+Time     9.39s	Block    234	Tx    168	 
+Time     9.40s	Block    235	Tx    168	 
+Time     9.43s	Block    236	Tx    168	 
+From Orderer Time     9.43s	Block    237	 Tx    168
+Time     9.49s	Block    237	Tx    168	 
+From Orderer Time     9.49s	Block    238	 Tx    168
+From Orderer Time     9.54s	Block    239	 Tx    151
+Time     9.53s	Block    238	Tx    168	 
+Time     9.55s	Block    239	Tx    151	 
+From Orderer Time     9.57s	Block    240	 Tx    168
+Time     9.59s	Block    240	Tx    168	 
+From Orderer Time     9.59s	Block    241	 Tx    168
+Time     9.62s	Block    241	Tx    168	 
+From Orderer Time     9.63s	Block    242	 Tx    168
+Time     9.65s	Block    242	Tx    168	 
+From Orderer Time     9.67s	Block    243	 Tx    168
+Time     9.69s	Block    243	Tx    168	 
+From Orderer Time     9.70s	Block    244	 Tx    168
+Time     9.72s	Block    244	Tx    168	 
+From Orderer Time     9.73s	Block    245	 Tx    168
+Time     9.75s	Block    245	Tx    168	 
+From Orderer Time     9.77s	Block    246	 Tx    168
+Time     9.80s	Block    246	Tx    168	 
+From Orderer Time     9.80s	Block    247	 Tx    168
+Time     9.86s	Block    247	Tx    168	 
+From Orderer Time     9.86s	Block    248	 Tx    168
+From Orderer Time     9.87s	Block    249	 Tx    168
+Time     9.88s	Block    248	Tx    168	 
+From Orderer Time     9.90s	Block    250	 Tx    168
+Time     9.91s	Block    249	Tx    168	 
+Time     9.93s	Block    250	Tx    168	 
+From Orderer Time     9.93s	Block    251	 Tx    168
+Time     9.95s	Block    251	Tx    168	 
+From Orderer Time     9.96s	Block    252	 Tx    168
+Time     9.99s	Block    252	Tx    168	 
+From Orderer Time    10.00s	Block    253	 Tx    168
+Time    10.02s	Block    253	Tx    168	 
+From Orderer Time    10.03s	Block    254	 Tx    168
+Time    10.05s	Block    254	Tx    168	 
+From Orderer Time    10.07s	Block    255	 Tx    168
+Time    10.09s	Block    255	Tx    168	 
+From Orderer Time    10.10s	Block    256	 Tx    168
+Time    10.12s	Block    256	Tx    168	 
+From Orderer Time    10.13s	Block    257	 Tx    168
+Time    10.16s	Block    257	Tx    168	 
+From Orderer Time    10.16s	Block    258	 Tx    168
+From Orderer Time    10.19s	Block    259	 Tx    168
+Time    10.19s	Block    258	Tx    168	 
+Time    10.22s	Block    259	Tx    168	 
+From Orderer Time    10.22s	Block    260	 Tx    168
+Time    10.24s	Block    260	Tx    168	 
+From Orderer Time    10.25s	Block    261	 Tx    168
+From Orderer Time    10.28s	Block    262	 Tx    168
+Time    10.28s	Block    261	Tx    168	 
+Time    10.30s	Block    262	Tx    168	 
+From Orderer Time    10.31s	Block    263	 Tx    168
+From Orderer Time    10.35s	Block    264	 Tx    168
+Time    10.37s	Block    263	Tx    168	 
+From Orderer Time    10.38s	Block    265	 Tx    168
+Time    10.40s	Block    264	Tx    168	 
+From Orderer Time    10.42s	Block    266	 Tx    168
+Time    10.42s	Block    265	Tx    168	 
+Time    10.44s	Block    266	Tx    168	 
+From Orderer Time    10.44s	Block    267	 Tx    168
+Time    10.47s	Block    267	Tx    168	 
+From Orderer Time    10.47s	Block    268	 Tx    168
+Time    10.50s	Block    268	Tx    168	 
+From Orderer Time    10.51s	Block    269	 Tx    168
+From Orderer Time    10.52s	Block    270	 Tx     68
+Time    10.53s	Block    269	Tx    168	 
+Time    10.54s	Block    270	Tx     68	 
+From Orderer Time    10.56s	Block    271	 Tx    168
+Time    10.58s	Block    271	Tx    168	 
+From Orderer Time    11.52s	Block    272	 Tx    143
+Time    11.54s	Block    272	Tx    143	 
+tx: 40000, duration: 11.540760267s, tps: 3465.976164
